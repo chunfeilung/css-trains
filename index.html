@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="Illustrations of Dutch rolling stock, created entirely using HTML and CSS." />
+<link rel="shortcut icon" href="https://chuniversiteit.nl/favicon.ico" type="image/x-icon" />
+<title>Dutch trains in CSS</title>
+<style>
+:root {
+    --colour-blue: #0052a4;
+    --colour-grey: #646464;
+    --colour-white: white;
+    --colour-yellow: #ffc73b;
+}
+
+body {
+    color: #002284;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer {
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
+.frame {
+    background: skyblue;
+    border: 1rem solid #333;
+    height: 15rem;
+    margin: 1rem auto;
+    max-width: 44rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.overhead-line {
+    background: #777;
+    height: .05rem;
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+}
+
+.overhead-line::before {
+    border: .05rem solid #777;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 2rem;
+    left: -30rem;
+    position: absolute;
+    top: -3.5rem;
+    width: 80rem;
+}
+
+.landscape {
+    background: yellowgreen;
+    bottom: 0;
+    box-shadow: 0 -.2rem 0 .2rem #cbb,
+                0 -.4rem 0 .2rem #aaa;
+    display: block;
+    height: 3.45rem;
+    position: absolute;
+    width: 100%;
+    z-index: 12;
+}
+
+.slt {
+    display: flex;
+    justify-content: flex-start;
+    left: 4rem;
+    margin-left: 4.3rem;
+    position: absolute;
+    top: 3.5rem;
+}
+
+.slt .car {
+    background: var(--colour-white);
+    border-bottom: .25rem solid var(--colour-yellow);
+    display: flex;
+    height: 4.8rem;
+    margin: 1rem .3rem;
+}
+
+.slt .car-1 {
+    border-top: 1rem solid var(--colour-blue);
+    position: relative;
+    top: -1rem;
+    width: 29.3rem;
+    z-index: 10;
+}
+
+.slt .car-1::before {
+    border-left: .5rem solid transparent;
+    border-top: 2rem solid #888;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 10rem;
+    top: -1.5rem;
+    transform: scaleY(.5) scaleX(9);
+    width: 2rem;
+}
+
+.slt .car-1::after {
+    bottom: -1.65rem;
+    content: '';
+    border-left: .1rem solid transparent;
+    border-right: .1rem solid transparent;
+    border-top: 2rem solid var(--colour-grey);
+    display: block;
+    height: 0;
+    left: 15rem;
+    position: absolute;
+    transform: scaleY(.4) scaleX(9);
+    width: 2rem;
+}
+
+.slt .car-2 {
+    border-top: .4rem solid #888;
+    box-shadow: -1rem .1rem 0 -.1rem var(--colour-grey),
+                 1rem .1rem 0 -.1rem var(--colour-grey);
+    position: relative;
+    top: -.4rem;
+    width: 27.5rem;
+}
+
+.slt .drivers-cabin {
+    background: var(--colour-white);
+    border-radius: 80% 0% 0% 80% / 80% 0% 0% 20%;
+    display: block;
+    height: 4.8rem;
+    position: absolute;
+    left: -4.5rem;
+    width: 5rem;
+}
+
+.slt .drivers-cabin::before {
+    background: var(--colour-blue);
+    border-radius: 80% 0% 0% 80% / 80% 0% 0% 20%;
+    content: '';
+    display: block;
+    height: 6rem;
+    position: absolute;
+    top: -1rem;
+    width: 5rem;
+    z-index: -1;
+}
+
+.slt .drivers-cabin::after {
+    background: var(--colour-yellow);
+    border-radius: 80% 0% 0% 80% / 80% 0% 0% 20%;
+    content: '';
+    display: block;
+    height: 4.8rem;
+    position: absolute;
+    top: .3rem;
+    width: 5rem;
+    z-index: -1;
+}
+
+.slt .coupler {
+    background: var(--colour-grey);
+    border-radius: 50% / 50%;
+    bottom: -1.2rem;
+    display: block;
+    height: 4rem;
+    position: absolute;
+    width: 1rem;
+    z-index: -1;
+}
+
+.slt .coupler::after {
+    bottom: -1rem;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-top: 3.2rem solid var(--colour-grey);
+    content: '';
+    display: block;
+    height: 0;
+    left: 0rem;
+    position: absolute;
+    transform: scaleY(.4);
+    width: 3.2rem;
+}
+
+.slt .first-class-section {
+    box-shadow: inset 0 .3rem 0 var(--colour-blue),
+                inset -.4rem .3rem 0 var(--colour-blue),
+                inset .4rem .3rem 0 var(--colour-blue),
+                inset 0 .5rem 0 var(--colour-white);
+    display: flex;
+}
+
+.slt .windows {
+    background: var(--colour-blue);
+    display: flex;
+    height: 2.8rem;
+    margin-top: .9rem;
+}
+
+.slt .first-class.windows {
+    border-bottom-right-radius: .4rem;
+    border-top-right-radius: .4rem;
+    box-shadow: -1rem 0 var(--colour-blue);
+    box-sizing: border-box;
+    flex-direction: row-reverse;
+    padding-right: .5rem;
+    position: relative;
+    width: 11.8rem;
+}
+
+.slt .first-class.windows::after {
+    background: var(--colour-blue);
+    border-radius: .4rem;
+    content: '';
+    display: block;
+    height: 2.2rem;
+    left: -3rem;
+    position: relative;
+    top: .3rem;
+    transform: scaleX(1.5) rotate(45deg);
+    width: 2.2rem; 
+}
+
+.slt .car-1 > .second-class.windows {
+    border-bottom-left-radius: .4rem;
+    border-top-left-radius: .4rem;
+    padding-left: .5rem;
+    position: relative;
+    width: calc(13.8rem - .5rem);
+}
+
+.slt .car-2 > .second-class.windows {
+    padding-left: .5rem;
+}
+
+.slt .doors {
+    display: flex;
+    float: left;
+    margin: .9rem .4rem 0;
+}
+
+.slt .door {
+    background: var(--colour-yellow);
+    display: block;
+    height: 4.2rem;
+    width: 1.45rem;
+}
+
+.slt .door:nth-child(2n+1) {
+    border-right: .05rem solid var(--colour-grey);
+    border-top-left-radius: .4rem;
+}
+
+.slt .door:nth-child(2n+2) {
+    border-left: .05rem solid var(--colour-grey);
+    border-top-right-radius: .4rem;
+}
+
+.slt .drivers-door {
+    border-left: .1rem solid #aaa;
+    border-right: .1rem solid #aaa;
+    display: block;
+    height: 2.4rem;
+    left: 3.5rem;
+    position: relative;
+    top: .8rem;
+    width: 1.3rem;
+    z-index: 10;
+}
+
+.slt .window {
+    background: repeating-linear-gradient(45deg, #cbe1e7, #d5e7ec 1rem);
+    border: .1rem solid #333;
+    border-radius: .3rem;
+    display: block;
+    height: 1.5rem;
+    margin: .8rem .35rem 0;
+}
+
+.slt .driver-window {
+    background: #444;
+    height: 1rem;
+    left: -.1rem;
+    position: relative;
+    top: -.7rem;
+    width: .65rem;
+}
+
+.slt .large-window {
+    width: 3.2rem;
+}
+
+.slt .door-window {
+    width: .65rem;
+}
+
+.slt .small-window {
+    width: 2.2rem;
+}
+
+.slt .wheels {
+    background: #444;
+    bottom: -1.3rem;
+    display: block;
+    height: 1rem;
+    position: absolute;
+    width: 3.5rem;
+}
+
+.slt .wheels::before {
+    background: #444;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 1.5rem;
+    left: -1rem;
+    position: absolute;
+    width: 1.5rem;
+}
+
+.slt .wheels::after {
+    background: #444;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 1.5rem;
+    position: absolute;
+    right: -1rem;
+    width: 1.5rem;
+}
+
+.slt .wheels-1 {
+    left: 1.2rem;
+}
+
+.slt .wheels-2 {
+    left: 27.7rem;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Dutch trains in CSS</h1>
+    </header>
+    <main>
+        <h2>NS Sprinter Lighttrain (SLT)</h2>
+        <div class="frame">
+            <div class="overhead-line"></div>
+            <div class="slt">
+                <div class="car car-1">
+                    <div class="drivers-cabin">
+                        <div class="drivers-door">
+                            <div class="window driver-window"></div>
+                        </div>
+                        <div class="coupler"></div>
+                    </div>
+                    <div class="first-class windows">
+                        <div class="first-class-section">
+                            <div class="window large-window"></div>
+                            <div class="window large-window"></div>
+                        </div>
+                    </div>
+                    <div class="doors">
+                        <div class="door">
+                            <div class="window door-window"></div>
+                        </div>
+                        <div class="door">
+                            <div class="window door-window"></div>
+                        </div>
+                    </div>
+                    <div class="second-class windows">
+                        <div class="window small-window"></div>
+                        <div class="window small-window"></div>
+                        <div class="window small-window"></div>
+                        <div class="window small-window"></div>
+                    </div>
+                    <div class="wheels wheels-1"></div>
+                    <div class="wheels wheels-2"></div>
+                </div>
+                <div class="car car-2">
+                    <div class="second-class windows">
+                        <div class="window small-window"></div>
+                        <div class="window small-window"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="landscape"></div>
+        </div>
+    </main>
+    <footer>
+        Made by <a href="https://chuniversiteit.nl">Chun Fei Lung</a>, who does not like trains
+    </footer>
+</body>
+</html>
