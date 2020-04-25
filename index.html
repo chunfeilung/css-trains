@@ -10,6 +10,7 @@
 :root {
     --colour-blue: #0052a4;
     --colour-grey: #646464;
+    --colour-lightblue: #4082f4;
     --colour-white: white;
     --colour-yellow: #ffc73b;
 }
@@ -36,6 +37,10 @@ footer {
     max-width: 44rem;
     overflow: hidden;
     position: relative;
+}
+
+.grey.frame {
+    background: #acd;
 }
 
 .overhead-line {
@@ -67,7 +72,11 @@ footer {
     height: 3.45rem;
     position: absolute;
     width: 100%;
-    z-index: 12;
+    z-index: 120;
+}
+
+.winter.landscape {
+    background: white;
 }
 
 .slt {
@@ -345,6 +354,363 @@ footer {
     left: 27.7rem;
 }
 
+.mat64 {
+    position: absolute;
+    left: 2rem;
+    top: 4.5rem;
+    transform: scale(.95);
+}
+
+.mat64 .car {
+    background-color: var(--colour-yellow);
+    box-shadow: -1.9rem 0 var(--colour-yellow),
+                -3rem -1rem 0 -1rem var(--colour-yellow),
+                -3.6rem -.5rem 0 -1rem var(--colour-yellow),
+                0 -1rem var(--colour-grey);
+    display: block;
+    height: 5.1rem;
+    left: 6.5rem;
+    position: absolute;
+    width: 40rem;
+    z-index: 50;
+}
+
+.mat64 .roof-front {
+    background: var(--colour-grey);
+    border-radius: 50%;
+    height: 2.4rem;
+    left: -2.2rem;
+    position: absolute;
+    top: -1rem;
+    width: 4rem;
+    z-index: 5;
+}
+
+.mat64 .roof-front::after {
+    background: var(--colour-yellow);
+    content: '';
+    display: block;
+    height: 1.4rem;
+    position: absolute;
+    top: 1rem;
+    width: 4.4rem;
+}
+
+.mat64 .nose {
+    background: var(--colour-yellow);
+    border-radius: 80% 20% 20% 20% / 50% 50% 50% 50%;
+    bottom: 0;
+    display: block;
+    height: 3.8rem;
+    left: -5.5rem;
+    position: absolute;
+    width: 4rem;
+}
+
+.mat64 .nose::before {
+    background: var(--colour-yellow);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: .5rem;
+    left: 1.8rem;
+    position: absolute;
+    top: -.9rem;
+    transform: rotate(-58deg);
+    width: 2.7rem;
+    z-index: -1;
+}
+
+.mat64 .nose::after {
+    background: var(--colour-yellow);
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2rem;
+    left: 2rem;
+    position: absolute;
+    width: 2rem;
+}
+
+.mat64 .nose .headlight {
+    background: var(--colour-grey);
+    border-radius: 40%;
+    display: block;
+    position: absolute;
+    height: .7rem;
+    left: -.2rem;
+    top: 2.2rem;
+    width: 1rem;
+}
+
+.mat64 .chin {
+    background: var(--colour-grey);
+    border-radius: .7rem;
+    bottom: -.5rem;
+    display: block;
+    height: 2rem;
+    left: -4.4rem;
+    position: absolute;
+    transform: scale(1.4) rotate(45deg);
+    width: 2rem;
+    z-index: -2;
+}
+
+.mat64 .stripes {
+    position: absolute;
+    left: 18.9rem;
+    top: .25rem;
+}
+
+.mat64 .stripe {
+    background: var(--colour-lightblue);
+    display: block;
+    float: left;
+    height: 4.7rem;
+    margin-right: .8rem;
+    transform: skew(-27deg);
+    width: 2.5rem;
+}
+
+.mat64 .doors {
+    display: flex;
+}
+
+.mat64 .mail.doors,
+.mat64 .passenger.doors {
+    position: absolute;
+    top: .7rem;
+    z-index: 6;
+}
+
+.mat64 .mail.doors {
+    left: 2.1rem;
+}
+
+.mat64 .driver.door,
+.mat64 .mail.doors > .door {
+    background-color: var(--colour-grey);
+    border: .05rem solid #333;
+    box-shadow: inset 0 4rem var(--colour-yellow);
+    display: block;
+    height: 4.4rem;
+    width: 1.5rem;
+}
+
+.mat64 .driver.door {
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    left: -.9rem;
+    position: absolute;
+    top: .7rem;
+    width: 1.1rem;
+    z-index: 7;
+}
+
+.mat64 .driver.door .window {
+    position: absolute;
+    left: -.15rem;
+}
+
+.mat64 .mail.doors > .door:nth-child(2n+1) {
+    border-right: .05rem solid #333;
+    border-top-left-radius: .2rem;
+}
+
+.mat64 .mail.doors > .door:nth-child(2n+2) {
+    border-left: .05rem solid #333;
+    border-top-right-radius: .2rem;
+}
+
+.mat64 .first.passenger.doors {
+    left: 7.5rem;
+}
+
+.mat64 .second.passenger.doors {
+    left: 29.4rem;
+}
+
+.mat64 .passenger.doors > .door {
+    background: var(--colour-grey);
+    display: block;
+    height: 4.4rem;
+    width: 1.3rem;
+}
+
+.mat64 .window {
+    border: .1rem solid #555;
+    border-radius: .3rem;
+    height: 2rem;
+    margin: .8rem .35rem 0;
+}
+
+.mat64 .window,
+.mat64 .front-window-1 {
+    background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
+    display: block;
+}
+
+.mat64 .front-windows {
+    display: flex;
+    left: -2.8rem;
+    position: absolute;
+    top: .6rem;
+    transform: rotate(28deg);
+    z-index: 11;
+}
+
+.mat64 .front-window-1 {
+    border: .1rem solid #555;
+    border-radius: 20%;
+    height: 1.2rem;
+    width: .3rem;
+}
+
+.mat64 .front-window-2 {
+    border-bottom: .5rem solid transparent;
+    border-left: .7rem solid var(--colour-yellow);
+    border-top: .5rem solid transparent;
+    height: 0;
+    margin-left: .3rem;
+    margin-top: .1rem;
+    width: 0;
+    z-index: 14;
+}
+
+.mat64 .front-window-2-border {
+    border-bottom: .7rem solid transparent;
+    border-left: 1rem solid #555;
+    border-top: .7rem solid transparent;
+    content: '';
+    height: 0;
+    left: -.8rem;
+    position: relative;
+    top: -.05rem;
+    width: 0;
+    z-index: 13;
+}
+
+.mat64 .driver.door .window,
+.mat64 .mail.doors .window,
+.mat64 .passenger.doors .window {
+    height: 1.8rem;
+    margin-top: .3rem;
+    width: .55rem;
+}
+
+.mat64 .passenger.doors > .door:nth-child(2n+1) {
+    border-right: .05rem solid #333;
+    border-top-left-radius: .2rem;
+}
+
+.mat64 .passenger.doors > .door:nth-child(2n+2) {
+    border-left: .05rem solid #333;
+    border-top-right-radius: .2rem;
+}
+
+.mat64 .windows {
+    display: flex;
+    position: absolute;
+}
+
+.mat64 .windows .window hr {
+    border: 0;
+    border-top: .1rem solid #555;
+}
+
+.mat64 .first.windows {
+    left: 10.7rem;
+}
+
+.mat64 .second.windows {
+    left: 32.6rem;
+}
+
+.mat64 .windows .window {
+    width: 2.3rem;
+}
+
+.mat64 .manager-cabin {
+    position: absolute;
+    left: 26.5rem;
+    top: .3rem;
+}
+
+.mat64 .manager-cabin .blind {
+    background: white;
+    border: .1rem solid #555;
+    border-radius: .2rem;
+    display: block;
+    height: .5rem;
+    width: 2rem;
+}
+
+.mat64 .manager-cabin .window {
+    height: 1.6rem;
+    margin-top: .2rem;
+}
+
+.mat64 .wheels {
+    background: #444;
+    bottom: -1.3rem;
+    display: block;
+    height: 1.2rem;
+    position: absolute;
+    width: 5rem;
+}
+
+.mat64 .wheels::before {
+    background: #444;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 1.7rem;
+    left: -1rem;
+    position: absolute;
+    width: 1.7rem;
+}
+
+.mat64 .wheels::after {
+    background: #444;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 1.7rem;
+    position: absolute;
+    right: -1rem;
+    width: 1.7rem;
+}
+
+.mat64 .wheels-2 {
+    position: absolute;
+    left: 34rem;
+}
+
+.mat64 .mystery-box-1,
+.mat64 .mystery-box-2,
+.mat64 .mystery-box-3 {
+    background: var(--colour-grey);
+    bottom: -1.2rem;
+    display: block;
+    height: 1.2rem;
+    position: absolute;
+}
+
+.mat64 .mystery-box-1 {
+    left: 16rem;
+    width: 1.5rem;
+}
+
+.mat64 .mystery-box-2 {
+    left: 21rem;
+    width: 4.4rem;
+}
+
+.mat64 .mystery-box-3 {
+    left: 27.5rem;
+    width: 1rem;
+}
+
 </style>
 </head>
 <body>
@@ -352,6 +718,7 @@ footer {
         <h1>Dutch trains in CSS</h1>
     </header>
     <main>
+
         <h2>NS Sprinter Lighttrain (SLT)</h2>
         <div class="frame">
             <div class="overhead-line"></div>
@@ -395,6 +762,74 @@ footer {
             </div>
             <div class="landscape"></div>
         </div>
+
+        <h2>NS Mat ’64 Plan V (“Apekop”)</h2>
+        <div class="grey frame">
+            <div class="overhead-line"></div>
+            <div class="mat64">
+                <div class="car">
+                    <div class="roof-front"></div>
+                    <div class="nose">
+                        <div class="headlight"></div>
+                    </div>
+                    <div class="chin"></div>
+                    <div class="front-windows">
+                        <div class="front-window-1"></div>
+                        <div class="front-window-2"></div>
+                        <div class="front-window-2-border"></div>
+                    </div>
+                    <div class="stripes">
+                        <div class="stripe"></div>
+                        <div class="stripe"></div>
+                        <div class="stripe"></div>
+                    </div>
+
+                    <div class="driver door"><div class="window"></div></div>
+
+                    <div class="mail doors">
+                        <div class="door"><div class="window"></div></div>
+                        <div class="door"><div class="window"></div></div>
+                    </div>
+
+                    <div class="first passenger doors">
+                        <div class="door"><div class="window"></div></div>
+                        <div class="door"><div class="window"></div></div>
+                    </div>
+
+                    <div class="first windows">
+                        <div class="window"><hr /></div>
+                        <div class="window"><hr /></div>
+                        <div class="window"><hr /></div>
+                        <div class="window"><hr /></div>
+                        <div class="window"><hr /></div>
+                    </div>
+
+                    <div class="manager-cabin">
+                        <div class="blind"></div>
+                        <div class="window"></div>
+                    </div>
+
+                    <div class="second passenger doors">
+                        <div class="door"><div class="window"></div></div>
+                        <div class="door"><div class="window"></div></div>
+                    </div>
+
+                    <div class="second windows">
+                        <div class="window"><hr /></div>
+                        <div class="window"><hr /></div>
+                    </div>
+
+                    <div class="mystery-box-1"></div>
+                    <div class="mystery-box-2"></div>
+                    <div class="mystery-box-3"></div>
+
+                    <div class="wheels wheels-1"></div>
+                    <div class="wheels wheels-2"></div>
+                </div>
+            </div>
+            <div class="winter landscape"></div>
+        </div>
+
     </main>
     <footer>
         Made by <a href="https://chuniversiteit.nl">Chun Fei Lung</a>, who does not like trains
