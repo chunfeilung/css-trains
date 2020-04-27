@@ -2,8 +2,22 @@
     --colour-blue: #0052a4;
     --colour-grey: #646464;
     --colour-lightblue: #4082f4;
+    --colour-oldblue: #004294;
+    --colour-oldyellow: #f7d117;
     --colour-white: white;
-    --colour-yellow: #ffc73b;
+    --colour-yellow: #ffbc00;
+}
+
+@media only screen and (max-width: 40rem) {
+    html {
+        font-size: .8rem;
+    }
+
+    .slt,
+    .icm,
+    .mat64 {
+        left: 1rem !important;
+    }
 }
 
 body {
@@ -27,40 +41,40 @@ footer {
 .ns-logo {
     background-color: #000463;
     clip-path: polygon(
-        7.2em 0,
-        0 7.2em,
-        7.2em 14.3em,
-        11.2em 14.3em,
-        5.5em 8.6em,
-        13.5em 8.6em,
-        19.5em 14.3em,
-        29.5em 14.3em,
-        36.7em 7.2em,
-        29.5em 0,
-        25.5em 0,
-        31.2em 5.8em,
-        23.2em 5.8em,
-        17.4em 0,
-        16em 0,
-        16em 2.9em,
-        22em 8.6em,
-        31.2em 8.6em,
-        28.3em 11.5em,
-        21em 11.5em,
-        15em 5.7em,
-        5.5em 5.7em,
-        8.4em 2.9em,
-        16em 2.9em,
-        16em 0
+        .37rem 0,
+        0 .37rem,
+        .37rem .74rem,
+        .58rem .74rem,
+        .28rem .45rem,
+        .7rem .45rem,
+        1rem .74rem,
+        1.53rem .74rem,
+        1.9rem .37rem,
+        1.53rem 0,
+        1.32rem 0,
+        1.62rem .3rem,
+        1.2rem .3rem,
+        .9rem 0,
+        .83rem 0,
+        .83rem .15rem,
+        1.14rem .45rem,
+        1.62rem .45rem,
+        1.47rem .6rem,
+        1.09rem .6rem,
+        .78rem .3rem,
+        .28rem .3rem,
+        .43rem .15rem,
+        .83rem .15rem,
+        .83rem 0
     );
     display: block;
-    height: 14.3em;
-    width: 36.7em;
+    height: .74rem;
+    width: 1.9rem;
 }
 
 .frame {
-    background: skyblue;
-    border: 1rem solid #333;
+    background-color: skyblue;
+    border: .3rem solid #000463;
     height: 15rem;
     margin: 1rem auto;
     max-width: 44rem;
@@ -69,14 +83,24 @@ footer {
 }
 
 .grey.frame {
-    background: #acd;
+    background-color: #acd;
+}
+
+.dark.frame {
+    background: linear-gradient(
+        to bottom,
+        #add2db 0%,
+        #eab838 47%,
+        #e5882b 80%,
+        #d13729 100%
+    );
 }
 
 .overhead-line {
     background: #777;
     height: .05rem;
     position: absolute;
-    top: 2.5rem;
+    top: 1.5rem;
     width: 100%;
 }
 
@@ -88,7 +112,7 @@ footer {
     height: 2rem;
     left: -30rem;
     position: absolute;
-    top: -3.5rem;
+    top: -3rem;
     width: 80rem;
 }
 
@@ -106,6 +130,47 @@ footer {
 
 .winter.landscape {
     background: white;
+}
+
+.brown.landscape {
+    background-color: #332200;
+}
+
+.flower.landscape {
+    letter-spacing: -.8rem;
+    line-height: .5rem;
+    margin-left: -.5rem;
+    width: calc(100% + 1rem);
+}
+
+.long.wheels {
+    background: #444;
+    display: block;
+    height: 1.2rem;
+    position: absolute;
+    width: 5rem;
+}
+
+.long.wheels::before {
+    background: #444;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 1.7rem;
+    left: -1rem;
+    position: absolute;
+    width: 1.7rem;
+}
+
+.long.wheels::after {
+    background: #444;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 1.7rem;
+    position: absolute;
+    right: -1rem;
+    width: 1.7rem;
 }
 
 .slt {
@@ -167,6 +232,20 @@ footer {
     position: relative;
     top: -.4rem;
     width: 27.5rem;
+}
+
+.slt .car-2::before {
+    content: '';
+    border-left: .1rem solid transparent;
+    border-right: .1rem solid transparent;
+    border-top: 2rem solid #888;
+    display: block;
+    height: 0;
+    left: 14rem;
+    position: absolute;
+    transform: rotate(180deg) scaleY(.4) scaleX(9);
+    top: -1.8rem;
+    width: 2rem;
 }
 
 .slt .drivers-cabin {
@@ -346,7 +425,6 @@ footer {
 
 .slt .ns-logo {
     background-color: var(--colour-blue);
-    font-size: 5%;
     left: 6.3rem;
     position: absolute;
     top: 3.85rem;
@@ -391,6 +469,259 @@ footer {
     left: 27.7rem;
 }
 
+.icm {
+    left: 3rem;
+    position: absolute;
+    top: 1.8rem;
+}
+
+.icm .car {
+    background-color: var(--colour-oldyellow);
+    border-bottom: .4rem solid var(--colour-grey);
+    display: block;
+    height: 5rem;
+    position: absolute;
+    top: 2.5rem;
+    width: 50rem;
+    z-index: 2;
+}
+
+.icmm .car {
+    background-color: var(--colour-yellow);
+}
+
+.icm .car::before {
+    background-color: var(--colour-oldyellow);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 4.5rem;
+    left: -.1rem;
+    position: relative;
+    top: .2rem;
+    width: .2rem;
+}
+
+.icmm .car::before {
+    background-color: var(--colour-yellow);
+}
+
+.icm .car::after {
+    bottom: -1.5rem;
+    content: '';
+    border-left: .05rem solid transparent;
+    border-right: .05rem solid transparent;
+    border-top: 2rem solid var(--colour-grey);
+    display: block;
+    height: 0;
+    left: 27rem;
+    position: absolute;
+    transform: scaleY(.4) scaleX(14);
+    width: 2rem;
+}
+
+.icm .roof {
+    background-color: var(--colour-grey);
+    clip-path: polygon(
+        3.8rem 0,
+        8rem 0,
+        17.5rem 1.2rem,
+        45rem 1.2rem,
+        45rem 2.2rem,
+        0 2.2rem,
+        2rem 1.5rem,
+        2rem 1.2rem,
+        2.8rem 1.2rem,
+        3rem 1.2rem
+    );
+    display: block;
+    height: 2.3rem;
+    position: absolute;
+    top: -2.2rem;
+    width: 45rem;
+}
+
+.icm .roof::after {
+    background-color: #333;
+    clip-path: polygon(
+        3.9rem .2rem,
+        6.5rem .2rem,
+        6.2rem .9rem,
+        3.3rem 1.1rem
+    );
+    content: '';
+    display: block;
+    height: 3rem;
+    position: absolute;
+    width: 7rem;
+}
+
+.icm .vent {
+    background-color: var(--colour-grey);
+    border-radius: .2rem;
+    display: block;
+    height: .6rem;
+    left: .2rem;
+    position: absolute;
+    top: .8rem;
+    width: .6rem;
+}
+
+.icm .headlight {
+    background-color: var(--colour-grey);
+    border-radius: .2rem;
+    display: block;
+    height: 1rem;
+    left: .2rem;
+    position: absolute;
+    top: 3.6rem;
+    width: .5rem;
+}
+
+.icm .blue-strip {
+    background-color: var(--colour-oldblue);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    display: block;
+    height: 2.9rem;
+    left: 4rem;
+    position: absolute;
+    top: .6rem;
+    width: 42rem;
+}
+
+.icmm .blue-strip {
+    background-color: var(--colour-blue);
+}
+
+.icmm .blue-strip::before {
+    background-color: var(--colour-blue);
+    border-radius: 50% 50% 50% 50% / 50% 0% 0% 50%;
+    content: '';
+    display: block;
+    height: 2.9rem;
+    right: 2.9rem;
+    position: relative;
+    width: 3.4rem;
+}
+
+.icm .blind {
+    background-color: white;
+    border: .05rem solid #333;
+    border-radius: .1rem;
+    display: block;
+    height: .5rem;
+    left: .5rem;
+    position: absolute;
+    top: .2rem;
+    width: 1rem;
+}
+
+.icmm .blind {
+    background-color: #222;
+    height: .6rem;
+    left: 0;
+    width: 2rem;
+}
+
+.icm .doors {
+    box-shadow: 0 .5rem var(--colour-grey);
+    display: flex;
+    left: 6.1rem;
+    position: absolute;
+    top: 0;
+}
+
+.icm .door {
+    border: .1rem solid #333;
+    display: block;
+    height: 4rem;
+    width: 1.4rem;
+}
+
+.icm .door:nth-child(2n+1) {
+    border-top-left-radius: .2rem;
+    margin-right: -.1rem;
+}
+
+.icm .door:nth-child(2n+2) {
+    border-top-right-radius: .2rem;
+    margin-left: -.1rem;
+}
+
+.icm .door .window {
+    margin: .4rem .3rem;
+    width: .6rem;
+}
+
+.icm .windows {
+    display: flex;
+    position: absolute;
+    left: 10.3rem;
+    top: .5rem;
+}
+
+.icm .window {
+    background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
+    border: .1rem solid #333;
+    border-radius: .2rem;
+    display: block;
+    height: 1.7rem;
+}
+
+.icm .small.window {
+    left: 4.1rem;
+    position: absolute;
+    top: .5rem;
+    width: 1rem;
+}
+
+.icm .normal.window {
+    margin: 0 .45rem;
+    width: 3.2rem;
+}
+
+.icm .chin {
+    border-top: 1rem solid var(--colour-grey);
+    border-right: 3rem solid transparent;
+    height: 0;
+    position: absolute;
+    top: 7.6rem;
+    width: 0;
+}
+
+.icm .chin::after {
+    border-bottom: .5rem solid var(--colour-grey);
+    border-right: 3rem solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    top: -1.5rem;
+    z-index: 10;
+}
+
+.icm .ns-logo {
+    background-color: black;
+    left: 15.5rem;
+    position: absolute;
+    top: 3.8rem;
+}
+
+.icmm .ns-logo {
+    background-color: var(--colour-blue);
+    left: 19.9rem;
+    position: absolute;
+    top: 3.9rem;
+}
+
+.icm .wheels {
+    top: 7.6rem;
+    left: 4.5rem;
+    z-index: 1;
+}
+
 .mat64 {
     position: absolute;
     left: 2rem;
@@ -399,10 +730,10 @@ footer {
 }
 
 .mat64 .car {
-    background-color: var(--colour-yellow);
-    box-shadow: -1.9rem 0 var(--colour-yellow),
-                -3rem -1rem 0 -1rem var(--colour-yellow),
-                -3.6rem -.5rem 0 -1rem var(--colour-yellow),
+    background-color: var(--colour-oldyellow);
+    box-shadow: -1.9rem 0 var(--colour-oldyellow),
+                -3rem -1rem 0 -1rem var(--colour-oldyellow),
+                -3.6rem -.5rem 0 -1rem var(--colour-oldyellow),
                 0 -1rem var(--colour-grey);
     display: block;
     height: 5.1rem;
@@ -424,7 +755,7 @@ footer {
 }
 
 .mat64 .roof-front::after {
-    background: var(--colour-yellow);
+    background: var(--colour-oldyellow);
     content: '';
     display: block;
     height: 1.4rem;
@@ -434,7 +765,7 @@ footer {
 }
 
 .mat64 .nose {
-    background: var(--colour-yellow);
+    background: var(--colour-oldyellow);
     border-radius: 80% 20% 20% 20% / 50% 50% 50% 50%;
     bottom: 0;
     display: block;
@@ -445,7 +776,7 @@ footer {
 }
 
 .mat64 .nose::before {
-    background: var(--colour-yellow);
+    background: var(--colour-oldyellow);
     border-radius: 50%;
     content: '';
     display: block;
@@ -459,14 +790,13 @@ footer {
 }
 
 .mat64 .nose::after {
-    background: var(--colour-yellow);
+    background: var(--colour-oldyellow);
     bottom: 0;
     content: '';
     display: block;
     height: 2rem;
-    left: 2rem;
     position: absolute;
-    width: 2rem;
+    width: 4rem;
 }
 
 .mat64 .nose .headlight {
@@ -478,18 +808,19 @@ footer {
     left: -.2rem;
     top: 2.2rem;
     width: 1rem;
+    z-index: 5;
 }
 
 .mat64 .chin {
     background: var(--colour-grey);
     border-radius: .7rem;
-    bottom: -.5rem;
+    bottom: -.9rem;
     display: block;
     height: 2rem;
-    left: -4.4rem;
+    left: -5rem;
     position: absolute;
-    transform: scale(1.4) rotate(45deg);
-    width: 2rem;
+    transform: scaleX(1.2) rotate(45deg);
+    width: 1.8rem;
     z-index: -2;
 }
 
@@ -528,7 +859,7 @@ footer {
 .mat64 .mail.doors > .door {
     background-color: var(--colour-grey);
     border: .05rem solid #333;
-    box-shadow: inset 0 4rem var(--colour-yellow);
+    box-shadow: inset 0 4rem var(--colour-oldyellow);
     display: block;
     height: 4.4rem;
     width: 1.5rem;
@@ -605,7 +936,7 @@ footer {
 
 .mat64 .front-window-2 {
     border-bottom: .5rem solid transparent;
-    border-left: .7rem solid var(--colour-yellow);
+    border-left: .7rem solid var(--colour-oldyellow);
     border-top: .5rem solid transparent;
     height: 0;
     margin-left: .3rem;
@@ -689,42 +1020,13 @@ footer {
 
 .mat64 .ns-logo {
     background-color: black;
-    font-size: 5%;
     left: 11.4rem;
     position: absolute;
     top: 3.7rem;
 }
 
-
 .mat64 .wheels {
-    background: #444;
     bottom: -1.3rem;
-    display: block;
-    height: 1.2rem;
-    position: absolute;
-    width: 5rem;
-}
-
-.mat64 .wheels::before {
-    background: #444;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 1.7rem;
-    left: -1rem;
-    position: absolute;
-    width: 1.7rem;
-}
-
-.mat64 .wheels::after {
-    background: #444;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 1.7rem;
-    position: absolute;
-    right: -1rem;
-    width: 1.7rem;
 }
 
 .mat64 .wheels-2 {
