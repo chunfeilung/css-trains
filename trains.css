@@ -14,6 +14,7 @@
     }
 
     .slt,
+    .loc1700,
     .icm,
     .mat64 {
         left: 1rem !important;
@@ -136,6 +137,10 @@ footer {
     background-color: #332200;
 }
 
+.sandy.landscape {
+    background-color: #dc8;
+}
+
 .flower.landscape {
     letter-spacing: -.8rem;
     line-height: .5rem;
@@ -181,6 +186,15 @@ footer {
     position: absolute;
     top: 3.5rem;
 }
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * SPRINTER LIGHTTRAIN
+ * -----------------------------------------------------------------------------
+ */
 
 .slt .car {
     background: var(--colour-white);
@@ -394,7 +408,11 @@ footer {
 }
 
 .slt .window {
-    background: repeating-linear-gradient(45deg, #cbe1e7, #d5e7ec 1rem);
+    background: repeating-linear-gradient(
+        45deg,
+        #cbe1e7,
+        #d5e7ec 1rem
+    );
     border: .1rem solid #333;
     border-radius: .3rem;
     display: block;
@@ -468,6 +486,277 @@ footer {
 .slt .wheels-2 {
     left: 27.7rem;
 }
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * 1700
+ * -----------------------------------------------------------------------------
+ */
+.loc1700 {
+    left: 2rem;
+    position: absolute;
+    top: 4rem;
+    transform: scale(1.05);
+}
+
+.loc1700 * {
+    display: block;
+    position: absolute;
+}
+
+.loc1700 .roof {
+    border-bottom: .5rem solid #555;
+    border-left: .3rem solid transparent;
+    height: 0;
+    left: -.5rem;
+    top: -.5rem;
+    width: 14.5rem;
+}
+
+.loc1700 .roof::before {
+    content: '';
+    display: block;
+    border-bottom: 1rem solid #aaa;
+    border-left: .3rem solid transparent;
+    height: 0;
+    left: 10rem;
+    position: absolute;
+    top: -1rem;
+    width: 8rem;
+}
+
+.loc1700 .roof::after {
+    background-color: var(--colour-yellow);
+    content: '';
+    display: block;
+    height: .2rem;
+    left: -.3rem;
+    position: relative;
+    top: .5rem;
+    width: 9.3rem;
+}
+
+.loc1700 .pantograph:nth-child(2n+1) {
+    left: 6rem;
+}
+
+.loc1700 .pantograph .collector {
+    background-color: var(--colour-grey);
+    height: .4rem;
+    width: .8rem;
+}
+
+.loc1700 .pantograph .arm,
+.loc1700 .pantograph:nth-child(2n+1) .arm::after {
+    background-color: var(--colour-grey);
+    height: .2rem;
+    width: 2.4rem;
+}
+
+.loc1700 .pantograph .control {
+    background-color: var(--colour-grey);
+    height: .5rem;
+    top: -.5rem;
+    width: 1.5rem;
+}
+
+.loc1700 .pantograph:nth-child(2n+1) .collector {
+    left: .6rem;
+    top: -2.4rem;
+}
+
+.loc1700 .pantograph:nth-child(2n+2) .collector {
+    left: 25.2rem;
+    top: -.9rem;
+}
+
+.loc1700 .pantograph:nth-child(2n+1) .arm {
+    left: .8rem;
+    top: -1.7rem;
+    transform: rotate(25deg);
+}
+
+.loc1700 .pantograph:nth-child(2n+1) .arm::after {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg) translateY(.8rem) translateX(-.3rem);
+}
+
+.loc1700 .pantograph:nth-child(2n+2) .arm {
+    box-shadow: 0 -.2rem var(--colour-grey);
+    left: 23.2rem;
+    top: -.4rem;
+}
+
+.loc1700 .pantograph:nth-child(2n+2) .control {
+    left: 25.2rem;
+}
+
+.loc1700 .front {
+    background-color: var(--colour-yellow);
+    border-bottom: .6rem solid #555;
+    height: 3.5rem;
+    left: 2.1rem;
+    top: .5rem;
+    width: 14.3rem;
+    z-index: 5;
+}
+
+.loc1700 .front::before {
+    background-color: #555;
+    clip-path: polygon(
+        0 0,
+        0 1.2rem,
+        1rem 1.2rem,
+        4rem .6rem,
+        4rem 0
+    );
+    content: '';
+    display: block;
+    height: 1.2rem;
+    left: -.7em;
+    position: absolute;
+    top: 3.5rem;
+    width: 4rem;
+    z-index: 3;
+}
+
+.loc1700 .front::after {
+    background-color: #333;
+    content: '';
+    display: block;
+    height: 1.2rem;
+    position: absolute;
+    top: 4.1rem;
+    width: 14.4rem;
+    z-index: 0;
+}
+
+.loc1700 .front-window {
+    border-top: 1.2rem solid #444;
+    border-left: .5rem solid transparent;
+    height: 0;
+    left: -.5rem;
+    top: .2rem;
+    width: 1.8rem;
+}
+
+.loc1700 .coupler {
+    background-color: #444;
+    height: .5rem;
+    left: -1.8rem;
+    top: 4.1rem;
+    width: 1.2rem;
+    z-index: 0;
+}
+
+.loc1700 .coupler::before {
+    background-color: #444;
+    content: '';
+    display: block;
+    left: -.2rem;
+    position: absolute;
+    top: -.1rem;
+    width: .2rem;
+    height: .8rem;
+}
+
+.loc1700 .nose {
+    background-color: var(--colour-yellow);
+    clip-path: polygon(
+        1.6rem 0,
+        1.6rem 2rem,
+        .5rem 2rem,
+        .2rem .5rem
+    );
+    height: 2rem;
+    left: -1.5rem;
+    top: 1.5rem;
+    width: 2rem;
+}
+
+.loc1700 .door {
+    border: .05rem solid var(--colour-grey);
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    height: 3.3rem;
+    left: 2rem;
+    top: .2rem;
+    width: 1.1rem;
+}
+
+.loc1700 .door .window {
+    background-color: gray;
+    border: .05rem solid var(--colour-grey);
+    border-radius: .2rem;
+    height: 1.2rem;
+    left: .15rem;
+    top: .15rem;
+    width: .7rem;
+}
+
+.loc1700 .ns-logo {
+    background-color: black;
+    left: 3.7rem;
+    top: .5rem;
+    transform: scale(1.5);
+}
+
+.loc1700 .number {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    left: 6.1rem;
+    top: 2.2rem;
+}
+
+.loc1700 .vents {
+    background: repeating-linear-gradient(
+        90deg,
+        #333,
+        #444 .2rem
+    );
+    height: 1.9rem;
+    left: 6.2rem;
+    top: .3rem;
+    width: 8.3rem;
+}
+
+.loc1700 .wheels {
+    left: 3rem;
+    top: 4.5rem;
+    z-index: 4;
+}
+
+.loc1700 .box {
+    background-color: #333;
+    left: 12.5rem;
+    height: 1.5rem;
+    top: 4.3rem;
+    width: 1.8rem;
+}
+
+.loc1700 .mirrored {
+    left: 16.3rem;
+    transform: scaleX(-1);
+}
+
+.loc1700 .mirrored .ns-logo {
+    transform: scaleX(-1) scale(1.5);
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * INTERCITYMATERIEEL
+ * -----------------------------------------------------------------------------
+ */
 
 .icm {
     left: 3rem;
@@ -662,7 +951,11 @@ footer {
 }
 
 .icm .window {
-    background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
+    background: repeating-linear-gradient(
+        45deg,
+        #8ba1b7,
+        #95a7bc 1rem
+    );
     border: .1rem solid #333;
     border-radius: .2rem;
     display: block;
@@ -721,6 +1014,15 @@ footer {
     left: 4.5rem;
     z-index: 1;
 }
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * MATERIEEL ’64
+ * -----------------------------------------------------------------------------
+ */
 
 .mat64 {
     position: absolute;
