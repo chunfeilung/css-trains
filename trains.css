@@ -14,6 +14,7 @@
     }
 
     .slt,
+    .virm,
     .loc1700,
     .icm,
     .mat64 {
@@ -22,20 +23,33 @@
 }
 
 body {
-    color: #000463;
-    font-family: Verdana, sans-serif;
-    margin: 1rem;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 1rem auto;
+    max-width: 44rem;
     padding: 0;
     text-align: center;
 }
 
+h1 {
+    font-size: 4rem;
+    letter-spacing: -.25rem;
+}
+
 h2 {
-    margin-top: 3rem;
+    font-size: 2rem;
+    letter-spacing: -.1rem;
+    margin-top: 5rem;
+}
+
+p {
+    line-height: 1.4;
+    margin: 1rem auto;
+    max-width: 40rem;
 }
 
 footer {
     font-style: italic;
-    margin: 2rem auto;
+    margin: 8rem auto 2rem;
     max-width: 40rem;
 }
 
@@ -75,9 +89,8 @@ footer {
 
 .frame {
     background-color: skyblue;
-    border: .3rem solid #000463;
     height: 15rem;
-    margin: 1rem auto;
+    margin: 0 auto;
     max-width: 44rem;
     overflow: hidden;
     position: relative;
@@ -95,6 +108,10 @@ footer {
         #e5882b 80%,
         #d13729 100%
     );
+}
+
+.darker.frame {
+    background: #8ab;
 }
 
 .overhead-line {
@@ -129,8 +146,12 @@ footer {
     z-index: 120;
 }
 
+.dark-grass.landscape {
+    background-color: #474;
+}
+
 .winter.landscape {
-    background: white;
+    background: #f5f5f5;
 }
 
 .brown.landscape {
@@ -148,33 +169,49 @@ footer {
     width: calc(100% + 1rem);
 }
 
-.long.wheels {
+.wheels {
     background: #444;
+    bottom: -1.3rem;
     display: block;
-    height: 1.2rem;
+    height: 1rem;
     position: absolute;
+    width: 3.5rem;
+}
+
+.long.wheels {
+    height: 1.2rem;
     width: 5rem;
 }
 
-.long.wheels::before {
+.wheels::before {
     background: #444;
     border-radius: 50%;
     content: '';
     display: block;
-    height: 1.7rem;
+    height: 1.5rem;
     left: -1rem;
     position: absolute;
+    width: 1.5rem;
+}
+
+.long.wheels::before {
+    height: 1.7rem;
     width: 1.7rem;
 }
 
-.long.wheels::after {
+.wheels::after {
     background: #444;
     border-radius: 50%;
     content: '';
     display: block;
-    height: 1.7rem;
+    height: 1.5rem;
     position: absolute;
     right: -1rem;
+    width: 1.5rem;
+}
+
+.long.wheels::after {
+    height: 1.7rem;
     width: 1.7rem;
 }
 
@@ -448,43 +485,330 @@ footer {
     top: 3.85rem;
 }
 
-.slt .wheels {
-    background: #444;
-    bottom: -1.3rem;
-    display: block;
-    height: 1rem;
-    position: absolute;
-    width: 3.5rem;
-}
-
-.slt .wheels::before {
-    background: #444;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 1.5rem;
-    left: -1rem;
-    position: absolute;
-    width: 1.5rem;
-}
-
-.slt .wheels::after {
-    background: #444;
-    border-radius: 50%;
-    content: '';
-    display: block;
-    height: 1.5rem;
-    position: absolute;
-    right: -1rem;
-    width: 1.5rem;
-}
-
 .slt .wheels-1 {
     left: 1.2rem;
 }
 
 .slt .wheels-2 {
     left: 27.7rem;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * VERLENGD INTERREGIOMATERIEEL
+ * -----------------------------------------------------------------------------
+ */
+
+.virm {
+    left: 2rem;
+    position: absolute;
+    top: 2.1rem;
+}
+
+.virm * {
+    display: block;
+    position: absolute;
+}
+
+.virm .nose {
+    top: 1.8rem;
+}
+
+.virm .nose::before {
+    background: var(--colour-grey);
+    clip-path: polygon(
+        7.6rem 0,
+        7.6rem 5.3rem,
+        2.7rem 5.3rem,
+        .1rem 4.5rem,
+        .25em 3.5rem,
+        1.4rem 1.3rem,
+        1.9rem .7rem,
+        2.1rem .5rem,
+        2.5rem .2rem,
+        2.7rem .1rem,
+        3.2rem 0
+    );
+    content: '';
+    display: block;
+    height: 6.5rem;
+    position: absolute;
+    top: -.8rem;
+    transform: scaleY(1.1);
+    width: 7.6rem;
+}
+
+.virm .nose::after {
+    background: var(--colour-oldyellow);
+    clip-path: polygon(
+        7.6rem 0,
+        7.6rem 5.3rem,
+        2.7rem 5.3rem,
+        2.7rem 5.5rem,
+        2.2rem 6rem,
+        .2rem 7rem,
+        .6rem 5.5rem,
+        .6rem 5.3rem,
+        .2rem 4.3rem,
+        .2rem 3.6rem,
+        1.6rem 1.3rem,
+        2.1rem .7rem,
+        2.3rem .5rem,
+        2.7rem .2rem,
+        2.9rem .1rem,
+        3.4rem 0
+    );
+    content: '';
+    display: block;
+    height: 6.5rem;
+    top: 1.8rem;
+    width: 7.6rem;
+}
+
+.virm .door {
+    border: .05rem solid #333;
+    border-bottom: .4rem solid #333;
+}
+
+.virm .driver.door {
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    height: 3.7rem;
+    left: 2.6rem;
+    top: 3rem;
+    width: 1rem;
+}
+
+.virm .driver.door::after {
+    background-color: #333;
+    content: '';
+    display: block;
+    height: .3rem;
+    position: absolute;
+    top: 4rem;
+    width: 10rem;
+}
+
+.virm .driver.door .window {
+    margin: .3rem .2rem;
+    width: .4rem;
+}
+
+.virm .doors {
+    left: 4.8rem;
+    top: 2.7rem;
+}
+
+.virm .doors::before {
+    background-color: var(--colour-oldblue);
+    border-bottom-left-radius: .2rem;
+    border-top-left-radius: .2rem;
+    content: '';
+    display: block;
+    height: 1.95rem;
+    left: -.6rem;
+    position: absolute;
+    top: .6rem;
+    width: 4.3rem;
+    z-index: 8;
+}
+
+.virm .doors .door {
+    height: 4rem;
+    width: 1.1rem;
+    z-index: 9;
+}
+
+.virm .doors .door:nth-child(2n+1) {
+    border-top-left-radius: .2rem;
+}
+
+.virm .doors .door:nth-child(2n+2) {
+    border-top-right-radius: .2rem;
+    left: 1.1rem;
+}
+
+.virm .doors .door .window {
+    height: 1.5rem;
+    margin: .6rem .2rem;
+    width: .6rem;
+}
+
+.virm .decks {
+    height: 6.9rem;
+    left: 7.5rem;
+    top: 1rem;
+    width: 30.5rem;
+}
+
+.virm .decks::before {
+    background-color: var(--colour-grey);
+    clip-path: polygon(
+        2.1rem 0,
+        32.8rem 0,
+        32.8rem 3rem,
+        0 3rem,
+        0 1.8rem
+    );
+    content: '';
+    display: block;
+    height: 1.8rem;
+    left: -2.2rem;
+    position: absolute;
+    top: -1rem;
+    width: 32.8rem;
+}
+
+.virm .decks::after {
+    background-color: var(--colour-oldyellow);
+    clip-path: polygon(
+        1rem 0,
+        30.5rem 0,
+        30.5rem 6rem,
+        29.5rem 6rem,
+        28.6rem 6.9rem,
+        1.6rem 6.9rem,
+        .6rem 6.1rem,
+        0 6.1rem,
+        0 .8rem
+    );
+    content: '';
+    display: block;
+    height: 6.9rem;
+    position: absolute;
+    width: 30.5rem;
+    z-index: 1;
+}
+
+.virm .upper-deck {
+    background-color: var(--colour-oldblue);
+    box-shadow: inset 2.4rem 0 var(--colour-oldyellow);
+    display: flex;
+    height: 1.4rem;
+    left: .5rem;
+    top: .4rem;
+    width: 30rem;
+    z-index: 5;
+}
+
+.virm .upper-deck::before {
+    background-color: var(--colour-oldblue);
+    content: '';
+    display: block;
+    height: 1.8rem;
+    position: relative;
+    left: 2.4rem;
+    transform: translateY(1rem) translateX(-2.9rem) rotate(-39deg);
+    width: 3.85rem;
+    z-index: 5;
+}
+
+.virm .ns-logo {
+    left: 9.9rem;
+    top: 2.5rem;
+    z-index: 20;
+}
+
+.virm .lower-deck {
+    background-color: var(--colour-oldblue);
+    border-radius: .3rem;
+    display: flex;
+    height: 1.8rem;
+    left: 3.2rem;
+    padding-left: 4rem;
+    top: 4rem;
+    width: calc(23rem - 4rem);
+    z-index: 5;
+}
+
+.virm .lower-deck::after {
+    background-color: var(--colour-grey);
+    clip-path: polygon(
+        0 0,
+        27rem 0,
+        26rem .8rem,
+        1rem .8rem
+    );
+    content: '';
+    display: block;
+    height: .8rem;
+    left: -1.7rem;
+    position: absolute;
+    top: 2.9rem;
+    width: 27rem;
+}
+
+.virm .window {
+    background: repeating-linear-gradient(
+        45deg,
+        #8ba1b7,
+        #95a7bc 1rem
+    );
+    border: .05rem solid #222;
+    border-radius: .2rem;
+    margin: 0 .35rem;
+    position: static;
+    height: 1.2rem;
+    width: 2.5rem;
+}
+
+.virm .small.window {
+    margin-left: .4rem;
+    width: .9rem;
+}
+
+.virm .upper-deck .small.window {
+    margin-left: -.05rem;
+}
+
+.virm .lower-deck .window {
+    height: 1.3rem;
+    margin-top: .2rem;
+}
+
+.virm .back {
+    background-color: var(--colour-oldyellow);
+    box-shadow: 0 -1.4rem var(--colour-oldblue),
+                0 -2.2rem var(--colour-grey),
+                -.8rem .3rem #333;
+    height: 4.2rem;
+    left: 37.9rem;
+    top: 2.8rem;
+    width: 7rem;
+}
+
+.virm .back .doors {
+    left: 0rem;
+    top: 0rem;
+}
+
+.virm .back .doors::before {
+    left: -1.3rem;
+    width: 8rem;
+}
+
+.virm .back > .window {
+    height: 1.5rem;
+    left: 3.8rem;
+    position: absolute;
+    top: .8rem;
+    z-index: 8;
+}
+
+.virm .wheels {
+    transform: scale(1.1);
+    top: 7.3rem;
+}
+
+.virm .wheels:nth-child(2n+1) {
+    left: 4rem;
+}
+
+.virm .wheels:nth-child(2n+2) {
+    left: 39rem;
 }
 
 
@@ -922,7 +1246,7 @@ footer {
 }
 
 .icm .door {
-    border: .1rem solid #333;
+    border: .05rem solid #333;
     display: block;
     height: 4rem;
     width: 1.4rem;
@@ -930,12 +1254,12 @@ footer {
 
 .icm .door:nth-child(2n+1) {
     border-top-left-radius: .2rem;
-    margin-right: -.1rem;
+    margin-right: -.05rem;
 }
 
 .icm .door:nth-child(2n+2) {
     border-top-right-radius: .2rem;
-    margin-left: -.1rem;
+    margin-left: -.05rem;
 }
 
 .icm .door .window {
@@ -956,10 +1280,10 @@ footer {
         #8ba1b7,
         #95a7bc 1rem
     );
-    border: .1rem solid #333;
+    border: .05rem solid #333;
     border-radius: .2rem;
     display: block;
-    height: 1.7rem;
+    height: 1.75rem;
 }
 
 .icm .small.window {
