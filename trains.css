@@ -23,6 +23,7 @@
 }
 
 body {
+    background-color: /*cov*/#fefefe;
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -31,6 +32,7 @@ body {
 header {
     background-color: var(--colour-oldblue);
     border-top: 4rem solid var(--colour-oldyellow);
+    margin-bottom: 5rem;
     padding: .5rem 0 0;
 }
 
@@ -41,7 +43,7 @@ footer {
 }
 
 h1 {
-    color: white;
+    color: #fefefe;
     font-size: 3.5rem;
     letter-spacing: -.15rem;
     margin: 0;
@@ -52,7 +54,7 @@ h1 {
 }
 
 h1 .ns-logo {
-    background-color: white;
+    background-color: #fefefe;
     display: inline-block;
     margin: 0 2rem;
     position: relative;
@@ -82,7 +84,12 @@ p {
 
 footer {
     color: #444;
-    margin: 8rem auto 2rem;
+    margin: 8rem auto 1rem;
+    text-align: center;
+}
+
+a {
+    color: var(--colour-blue);
 }
 
 .ns-logo {
@@ -201,6 +208,15 @@ footer {
     width: calc(100% + 1rem);
 }
 
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * GENERIC
+ * -----------------------------------------------------------------------------
+ */
+
 .wheels {
     background: #444;
     bottom: -1.3rem;
@@ -247,15 +263,6 @@ footer {
     width: 1.7rem;
 }
 
-.slt {
-    display: flex;
-    justify-content: flex-start;
-    left: 4rem;
-    margin-left: 4.3rem;
-    position: absolute;
-    top: 3.5rem;
-}
-
 
 
 
@@ -264,6 +271,14 @@ footer {
  * SPRINTER LIGHTTRAIN
  * -----------------------------------------------------------------------------
  */
+.slt {
+    display: flex;
+    justify-content: flex-start;
+    left: 4rem;
+    margin-left: 4.3rem;
+    position: absolute;
+    top: 3.5rem;
+}
 
 .slt .car {
     background: var(--colour-white);
@@ -1466,6 +1481,351 @@ footer {
     top: 7.6rem;
     left: 4.5rem;
     z-index: 1;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * SPRINTER
+ * -----------------------------------------------------------------------------
+ */
+ .sgm {
+    position: absolute;
+    left: 2rem;
+    top: 3.5rem;
+ }
+
+.sgm * {
+    display: block;
+    position: absolute;
+}
+
+.sgm .car {
+    background-color: var(--colour-oldyellow);
+    box-shadow: inset 0 .8rem var(--colour-grey),
+                1rem -.5rem var(--colour-grey);
+    height: 5.5rem;
+    left: 2.8rem;
+    top: .3rem;
+    width: 42rem;
+}
+
+.sgm.modern .car {
+    background-color: var(--colour-yellow);
+    box-shadow: inset 0 .8rem var(--colour-blue),
+                1rem -.5rem var(--colour-blue),
+                inset 0 4.6rem var(--colour-white);
+}
+
+.sgm .head {
+    background-color: var(--colour-grey);
+    clip-path: polygon(
+        1.9rem 0,
+        4.5rem 0,
+        4.5rem 1.3rem,
+        0 1.2rem,
+        .1rem .5rem,
+        .5rem .2rem,
+        1rem .1rem
+    );
+    height: 1.3rem;
+    left: -1.5rem;
+    top: -.5rem;
+    width: 4.5rem;
+}
+
+.sgm.modern .head {
+    background-color: var(--colour-blue);
+}
+
+.sgm .nose {
+    background-color: var(--colour-oldyellow);
+    clip-path: polygon(
+        1.6rem 0,
+        3rem .8rem,
+        3rem 5.5rem,
+        .8rem 5.5rem,
+        .3rem 4.5rem,
+        .3rem 4rem
+    );
+    display: block;
+    height: 5.5rem;
+    left: -3rem;
+    width: 3rem;
+}
+
+.sgm.modern .nose {
+    background-color: var(--colour-yellow);
+    box-shadow: inset 0 4.6rem var(--colour-white);
+}
+
+.sgm.modern .nose::before {
+    background-color: var(--colour-blue);
+    border-radius: 2rem;
+    content: '';
+    display: block;
+    height: 10rem;
+    position: absolute;
+    transform: translateY(-6.5rem) translateX(0rem) rotate(45deg);
+    width: 5rem;
+}
+
+.sgm .nose hr {
+    border: 0;
+    border-top: .15rem solid var(--colour-grey);
+    position: absolute;
+    top: 3.3rem;
+    width: 2rem;
+}
+
+.sgm .nose hr:nth-child(2) {
+    top: 4rem;
+}
+
+.sgm .driver-window {
+    background-color: #333;
+    clip-path: polygon(
+        .6rem .2rem,
+        2rem 1rem,
+        1.6rem 2rem,
+        0 2.3rem
+    );
+    height: 2.3rem;
+    left: -2.2rem;
+    transform: scale(.8);
+    width: 2rem;
+    z-index: 20;
+}
+
+.sgm .driver-window::after {
+    background-color: #666;
+    clip-path: polygon(
+        .75rem .4rem,
+        1.9rem 1.1rem,
+        1.5rem 1.9rem,
+        .2rem 2.2rem
+    );
+    content: '';
+    display: block;
+    height: 2.3rem;
+    position: absolute;
+    width: 2rem;
+}
+
+.sgm .chin {
+    background-color: var(--colour-grey);
+    border-bottom-left-radius: 1rem .5rem;
+    border-bottom-right-radius: .5rem;
+    height: 1rem;
+    left: -2rem;
+    top: 5.5rem;
+    width: 2.5rem;
+}
+
+.sgm .ns-logo {
+    background-color: black;
+    left: 7.8rem;
+    top: 4.15rem;
+    transform: scale(1.2);
+}
+
+.sgm.modern .ns-logo {
+    background-color: var(--colour-blue);
+    left: 11rem;
+    top: 3.7rem;
+    transform: scale(.9);
+}
+
+.sgm .doors {
+    display: flex;
+}
+
+.sgm .driver.door {
+    background-color: var(--colour-grey);
+    border: .05rem solid #333;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    box-shadow: inset 0 3.8rem var(--colour-oldyellow);
+    display: block;
+    height: 4.1rem;
+    left: .5rem;
+    top: 1.4rem;
+    width: 1.1rem;
+    z-index: 7;
+}
+
+.sgm.modern .driver.door {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.sgm.modern .driver.door::before {
+    border-left: .1rem solid var(--colour-blue);
+    border-right: 2.9rem solid transparent;
+    border-top: 2.6rem solid var(--colour-blue);
+    content: '';
+    display: block;
+    height: 0;
+    left: -1.9rem;
+    position: absolute;
+    top: -1.4rem;
+    width: 0;
+}
+
+.sgm .passenger.doors {
+    top: 1.1rem;
+    z-index: 6;
+}
+
+.sgm .driver.door .window {
+    position: absolute;
+    left: -.15rem;
+}
+
+.sgm .front.passenger.doors {
+    left: 3.5rem;
+}
+
+.sgm .middle.passenger.doors {
+    left: 23.9rem;
+}
+
+.sgm .passenger.doors > .door {
+    background: var(--colour-grey);
+    display: block;
+    height: 4.1rem;
+    margin-top: .3rem;
+    position: static;
+    width: 1.3rem;
+}
+
+.sgm.modern .passenger.doors > .door {
+    background-color: var(--colour-yellow);
+    border: .05rem solid #333;
+}
+
+.sgm .passenger.doors > .door:nth-child(1) {
+    border-right: .05rem solid #333;
+    border-top-left-radius: .2rem;
+}
+
+.sgm .passenger.doors > .door:nth-child(2) {
+    border-left: .05rem solid #333;
+    border-top-right-radius: .2rem;
+}
+
+.sgm .blind {
+    background: white;
+    border: .1rem solid #555;
+    border-radius: .2rem;
+    left: 10.65rem;
+    height: .5rem;
+    top: .8rem;
+    width: 2rem;
+}
+
+.sgm.modern .blind {
+    background-color: #333;
+    border-width: .05rem;
+    height: .4rem;
+    left: 10.6rem;
+    top: .9rem;
+    width: 2.2rem;
+}
+
+.sgm .windows {
+    display: flex;
+    top: 1.45rem;
+}
+
+.sgm.modern .windows {
+    background-color: var(--colour-blue);
+    border-radius: .2rem;
+    height: 2rem;
+}
+
+.sgm .car > .windows:nth-child(2n+1) {
+    left: 7rem;
+}
+
+.sgm .car > .windows:nth-child(2n+2) {
+    left: 27.3rem;
+}
+
+.sgm .window {
+    background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
+    border: .1rem solid #333;
+    border-radius: .3rem;
+    height: 1.7rem;
+    margin: .05rem .4rem 0;
+    position: static;
+    width: 2.3rem;
+    z-index: 10;
+}
+
+.sgm .windows .window:first-child {
+    margin-left: .2rem;
+}
+
+.sgm .windows .window:last-child {
+    margin-right: .2rem;
+}
+
+.sgm .door .window {
+    height: 1.5rem;
+    margin-top: .3rem;
+    margin-left: .3rem;
+    width: .55rem;
+}
+
+.sgm .window hr {
+    border: 0;
+    border-top: .1rem solid #333;
+    position: static;
+    z-index: 20;
+}
+
+.sgm .stripes {
+    border-top: .2rem dashed var(--colour-lightblue);
+    left: 25.6rem;
+    padding-left: 4.4rem;
+    padding-right: 1rem;
+    top: .9rem;
+}
+
+.sgm.modern .stripes {
+    display: none;
+}
+
+.sgm .stripe {
+    background: var(--colour-lightblue);
+    display: block;
+    float: left;
+    height: 4.5rem;
+    margin-right: .8rem;
+    position: static;
+    transform: skew(-27deg);
+    width: 2.8rem;
+}
+
+.sgm .wheels:nth-child(2n+1) {
+    left: calc(5.8rem - 2.8rem);
+    top: 5.5rem;
+}
+
+.sgm .wheels:nth-child(2n+2) {
+    left: calc(41rem - 2.8rem);
+    top: 5.5rem;
+}
+
+.sgm .boxes {
+    background-color: #444;
+    height: 1.3rem;
+    left: 17rem;
+    top: 5.5rem;
+    width: 12rem;
 }
 
 
