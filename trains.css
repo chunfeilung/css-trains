@@ -24,33 +24,65 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--colour-oldblue);
+    border-top: 4rem solid var(--colour-oldyellow);
+    padding: .5rem 0 0;
+}
+
+main,
+footer {
     margin: 1rem auto;
     max-width: 44rem;
-    padding: 0;
-    text-align: center;
 }
 
 h1 {
-    font-size: 4rem;
-    letter-spacing: -.25rem;
+    color: white;
+    font-size: 3.5rem;
+    letter-spacing: -.15rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    top: .85rem;
+}
+
+h1 .ns-logo {
+    background-color: white;
+    display: inline-block;
+    margin: 0 2rem;
+    position: relative;
+    text-indent: -1000000rem;
+    top: 1.75rem;
+    transform: scale(3.2);
 }
 
 h2 {
-    font-size: 2rem;
-    letter-spacing: -.1rem;
-    margin-top: 5rem;
+    font-size: 1.6rem;
+    letter-spacing: -.05rem;
+    margin: 4rem 0 1rem;
+    padding: 0 2rem;
+}
+
+p,
+footer {
+    line-height: 1.5;
+    margin: 1rem auto;
+    max-width: 40rem;
+    padding: 0 2rem;
 }
 
 p {
-    line-height: 1.4;
-    margin: 1rem auto;
-    max-width: 40rem;
+    font-size: 1.1rem;
 }
 
 footer {
-    font-style: italic;
+    color: #444;
     margin: 8rem auto 2rem;
-    max-width: 40rem;
 }
 
 .ns-logo {
@@ -568,6 +600,10 @@ footer {
     width: 7.6rem;
 }
 
+.virm.modern .nose::after {
+    background-color: var(--colour-yellow);
+}
+
 .virm .door {
     border: .05rem solid #333;
     border-bottom: .4rem solid #333;
@@ -616,19 +652,45 @@ footer {
     z-index: 8;
 }
 
+.virm.modern .front .doors::before {
+    background-color: var(--colour-blue);
+    border-radius: .2rem;
+    height: 1.9rem;
+    left: 1.9rem;
+    top: 1.4rem;
+    transform: rotate(25deg);
+    width: 4.7rem;
+}
+
 .virm .doors .door {
     height: 4rem;
     width: 1.1rem;
     z-index: 9;
 }
 
+.virm.modern .doors .door {
+    background-color: var(--colour-yellow);
+}
+
 .virm .doors .door:nth-child(2n+1) {
     border-top-left-radius: .2rem;
+}
+
+.virm.modern .doors .door:nth-child(2n+1) {
+    box-shadow: -.3rem -.1rem var(--colour-blue),
+                -.3rem -.3rem var(--colour-blue),
+                0     -.3rem var(--colour-blue);
 }
 
 .virm .doors .door:nth-child(2n+2) {
     border-top-right-radius: .2rem;
     left: 1.1rem;
+}
+
+.virm.modern .doors .door:nth-child(2n+2) {
+    box-shadow: .3rem -.1rem var(--colour-blue),
+                .3rem -.3rem var(--colour-blue),
+                0     -.3rem var(--colour-blue);
 }
 
 .virm .doors .door .window {
@@ -667,8 +729,8 @@ footer {
     clip-path: polygon(
         1rem 0,
         30.5rem 0,
-        30.5rem 6rem,
-        29.5rem 6rem,
+        30.5rem 6.1rem,
+        29.5rem 6.1rem,
         28.6rem 6.9rem,
         1.6rem 6.9rem,
         .6rem 6.1rem,
@@ -683,6 +745,10 @@ footer {
     z-index: 1;
 }
 
+.virm.modern .decks::after {
+    background-color: var(--colour-yellow);
+}
+
 .virm .upper-deck {
     background-color: var(--colour-oldblue);
     box-shadow: inset 2.4rem 0 var(--colour-oldyellow);
@@ -692,6 +758,24 @@ footer {
     top: .4rem;
     width: 30rem;
     z-index: 5;
+}
+
+.virm.modern .upper-deck {
+    background-color: var(--colour-blue);
+    border-radius: .2rem;
+    box-shadow: inset 3.4rem 0 var(--colour-yellow);
+    width: 25.2rem;
+}
+
+.virm.modern .upper-deck::after{
+    background-color: var(--colour-blue);
+    border-radius: .2rem;
+    content: '';
+    display: block;
+    height: 1.4rem;
+    left: 3.2rem;
+    position: absolute;
+    width: .5rem;
 }
 
 .virm .upper-deck::before {
@@ -706,10 +790,18 @@ footer {
     z-index: 5;
 }
 
+.virm.modern .upper-deck::before {
+    background-color: transparent;
+}
+
 .virm .ns-logo {
     left: 9.9rem;
     top: 2.5rem;
     z-index: 20;
+}
+
+.virm.modern .ns-logo {
+    background-color: var(--colour-blue);
 }
 
 .virm .lower-deck {
@@ -722,6 +814,13 @@ footer {
     top: 4rem;
     width: calc(23rem - 4rem);
     z-index: 5;
+}
+
+.virm.modern .lower-deck {
+    background-color: var(--colour-blue);
+    height: 2rem;
+    top: 3.8rem;
+    width: calc(24.5rem - 4rem);
 }
 
 .virm .lower-deck::after {
@@ -739,6 +838,10 @@ footer {
     position: absolute;
     top: 2.9rem;
     width: 27rem;
+}
+
+.virm.modern .lower-deck::after {
+    top: 3.1rem;
 }
 
 .virm .window {
@@ -774,10 +877,17 @@ footer {
     box-shadow: 0 -1.4rem var(--colour-oldblue),
                 0 -2.2rem var(--colour-grey),
                 -.8rem .3rem #333;
-    height: 4.2rem;
+    height: 4.3rem;
     left: 37.9rem;
     top: 2.8rem;
     width: 7rem;
+}
+
+.virm.modern .back {
+    background-color: var(--colour-yellow);
+    box-shadow: 0 -1rem var(--colour-yellow),
+                0 -2.2rem var(--colour-grey),
+                -.8rem .3rem #333;
 }
 
 .virm .back .doors {
@@ -788,6 +898,25 @@ footer {
 .virm .back .doors::before {
     left: -1.3rem;
     width: 8rem;
+}
+
+.virm.modern .back .doors::before {
+    background-color: var(--colour-blue);
+    left: 0;
+}
+
+.virm.modern .back .doors::after {
+    background-color: var(--colour-blue);
+    border-radius: .2rem;
+    content: '';
+    display: block;
+    height: 1.9rem;
+    left: -3.5rem;
+    position: absolute;
+    top: 1.2rem;
+    transform: rotate(-25deg);
+    width: 4.8rem;
+    z-index: 6;
 }
 
 .virm .back > .window {
@@ -1099,7 +1228,7 @@ footer {
     z-index: 2;
 }
 
-.icmm .car {
+.icm.modern .car {
     background-color: var(--colour-yellow);
 }
 
@@ -1115,7 +1244,7 @@ footer {
     width: .2rem;
 }
 
-.icmm .car::before {
+.icm.modern .car::before {
     background-color: var(--colour-yellow);
 }
 
@@ -1203,11 +1332,11 @@ footer {
     width: 42rem;
 }
 
-.icmm .blue-strip {
+.icm.modern .blue-strip {
     background-color: var(--colour-blue);
 }
 
-.icmm .blue-strip::before {
+.icm.modern .blue-strip::before {
     background-color: var(--colour-blue);
     border-radius: 50% 50% 50% 50% / 50% 0% 0% 50%;
     content: '';
@@ -1230,7 +1359,7 @@ footer {
     width: 1rem;
 }
 
-.icmm .blind {
+.icm.modern .blind {
     background-color: #222;
     height: .6rem;
     left: 0;
@@ -1326,7 +1455,7 @@ footer {
     top: 3.8rem;
 }
 
-.icmm .ns-logo {
+.icm.modern .ns-logo {
     background-color: var(--colour-blue);
     left: 19.9rem;
     position: absolute;
