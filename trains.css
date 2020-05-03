@@ -1,6 +1,8 @@
 :root {
     --colour-blue: #0052a4;
+    --colour-green: #156e46;
     --colour-grey: #646464;
+    --colour-ivory: #f5f5ce;
     --colour-lightblue: #4082f4;
     --colour-oldblue: #004294;
     --colour-oldyellow: #f7d117;
@@ -17,7 +19,8 @@
     .virm,
     .loc1700,
     .icm,
-    .mat64 {
+    .mat64,
+    .mat54 {
         left: 1rem !important;
     }
 }
@@ -129,7 +132,7 @@ a {
 .frame {
     background-color: skyblue;
     height: 15rem;
-    margin: 0 auto;
+    margin: .5rem auto;
     max-width: 44rem;
     overflow: hidden;
     position: relative;
@@ -186,7 +189,7 @@ a {
 }
 
 .dark-grass.landscape {
-    background-color: #474;
+    background-color: #6a4;
 }
 
 .winter.landscape {
@@ -1718,11 +1721,11 @@ a {
 
 .sgm .blind {
     background: white;
-    border: .1rem solid #555;
+    border: .05rem solid #555;
     border-radius: .2rem;
-    left: 10.65rem;
-    height: .5rem;
-    top: .8rem;
+    left: 10.55rem;
+    height: .4rem;
+    top: .9rem;
     width: 2rem;
 }
 
@@ -1730,7 +1733,7 @@ a {
     background-color: #333;
     border-width: .05rem;
     height: .4rem;
-    left: 10.6rem;
+    left: 10.45rem;
     top: .9rem;
     width: 2.2rem;
 }
@@ -1756,7 +1759,7 @@ a {
 
 .sgm .window {
     background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
-    border: .1rem solid #333;
+    border: .05rem solid #333;
     border-radius: .3rem;
     height: 1.7rem;
     margin: .05rem .4rem 0;
@@ -1916,7 +1919,8 @@ a {
 
 .mat64 .nose .headlight {
     background: var(--colour-grey);
-    border-radius: 40%;
+    border-bottom-right-radius: 40%;
+    border-top-right-radius: 40%;
     display: block;
     position: absolute;
     height: .7rem;
@@ -1924,6 +1928,20 @@ a {
     top: 2.2rem;
     width: 1rem;
     z-index: 5;
+}
+
+
+.mat64 .nose .headlight::after {
+    background-color: var(--colour-oldyellow);
+    border-radius: .2rem;
+    content: '';
+    display: block;
+    height: 1rem;
+    left: .4rem;
+    opacity: .8;
+    position: absolute;
+    top: -1.5rem;
+    width: 1rem;
 }
 
 .mat64 .chin {
@@ -2021,7 +2039,7 @@ a {
 }
 
 .mat64 .window {
-    border: .1rem solid #555;
+    border: .05rem solid #555;
     border-radius: .3rem;
     height: 2rem;
     margin: .8rem .35rem 0;
@@ -2043,7 +2061,7 @@ a {
 }
 
 .mat64 .front-window-1 {
-    border: .1rem solid #555;
+    border: .05rem solid #555;
     border-radius: 20%;
     height: 1.2rem;
     width: .3rem;
@@ -2061,9 +2079,9 @@ a {
 }
 
 .mat64 .front-window-2-border {
-    border-bottom: .7rem solid transparent;
-    border-left: 1rem solid #555;
-    border-top: .7rem solid transparent;
+    border-bottom: .65rem solid transparent;
+    border-left: .9rem solid #555;
+    border-top: .65rem solid transparent;
     content: '';
     height: 0;
     left: -.8rem;
@@ -2121,7 +2139,7 @@ a {
 
 .mat64 .manager-cabin .blind {
     background: white;
-    border: .1rem solid #555;
+    border: .05rem solid #555;
     border-radius: .2rem;
     display: block;
     height: .5rem;
@@ -2172,4 +2190,418 @@ a {
 .mat64 .mystery-box-3 {
     left: 27.5rem;
     width: 1rem;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * MATERIEEL ’54
+ * -----------------------------------------------------------------------------
+ * The version with the intercity livery is used as the base variant. Other
+ * liveries are defined as deltas on top of this base variant.
+ */
+
+.mat54 {
+    left: 2rem;
+    position: absolute;
+    top: 3.2rem;
+}
+
+.mat54 * {
+    display: block;
+    position: absolute;
+}
+
+.mat54 .car {
+    background-color: var(--colour-oldyellow);
+    box-shadow: inset 0 1.1rem 0 var(--colour-grey);
+    display: flex;
+    height: 5.8rem;
+    left: 5rem;
+    top: .1rem;
+    width: 45rem;
+}
+
+.mat54.green .car {
+    background-color: var(--colour-green);
+    box-shadow: inset 0 1.1rem 0 var(--colour-grey),
+                inset 0 -.2rem var(--colour-ivory);
+}
+
+.mat54 .car::after {
+    bottom: -1.5rem;
+    content: '';
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1.5rem solid var(--colour-grey);
+    display: block;
+    height: 0;
+    left: 8.3rem;
+    position: absolute;
+    width: 27rem;
+}
+
+.mat54 .pantograph {
+    top: -1.7rem;
+    left: 9rem;
+}
+
+.mat54 .pantograph .collector {
+    background-color: var(--colour-grey);
+    height: .2rem;
+    width: .6rem;
+}
+
+.mat54 .pantograph .arms {
+    border: .1rem solid var(--colour-grey);
+    height: 1.2rem;
+    left: -.4rem;
+    transform: scaleX(3) rotate(45deg);
+    top: .4rem;
+    width: 1.2rem;
+}
+
+.mat54 .roof-front {
+    background: var(--colour-grey);
+    border-radius: 50%;
+    height: 2.4rem;
+    left: -1.2rem;
+    position: absolute;
+    width: 3.8rem;
+    z-index: 0;
+}
+
+.mat54 .roof-front::after {
+    background: var(--colour-oldyellow);
+    clip-path: polygon(
+        .7rem 0,
+        1.8rem .3rem,
+        1.8rem .3rem,
+        4.5rem .3rem,
+        4.5rem 5rem,
+        0 5rem,
+        0 1.2rem
+    );
+    content: '';
+    display: block;
+    height: 5rem;
+    left: -.6rem;
+    position: absolute;
+    top: .8rem;
+    width: 4.4rem;
+}
+
+.mat54.green .roof-front::after {
+    background: var(--colour-green);
+    box-shadow: inset 0 -.2rem var(--colour-ivory);
+}
+
+.mat54 .front-windows {
+    display: flex;
+    left: -1.6rem;
+    top: 1.1rem;
+    transform: rotate(29deg);
+    z-index: 12;
+}
+
+.mat54 .front-windows .front-window {
+    background-color: #95a7bc;
+    border: .05rem solid #333;
+    border-radius: .2rem;
+    height: 1rem;
+    margin: 0 .05rem;
+    position: static;
+    width: 1rem;
+}
+
+.mat54 .front-windows .front-window:nth-child(1) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    width: .3rem;
+}
+
+.mat54 .front-windows .front-window:nth-child(2) {
+    width: .6rem;
+}
+
+.mat54 .nose {
+    background: var(--colour-oldyellow);
+    border-radius: 80% 20% 20% 20% / 50% 50% 50% 50%;
+    bottom: 0;
+    display: block;
+    height: 3.8rem;
+    left: -4.7rem;
+    position: absolute;
+    width: 4rem;
+    z-index: 4;
+}
+
+.mat54.green .nose {
+    background: var(--colour-green);
+}
+
+.mat54 .nose::after {
+    background: var(--colour-oldyellow);
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 2rem;
+    position: absolute;
+    width: 4rem;
+}
+
+.mat54.green .nose::after {
+    background: var(--colour-green);
+    box-shadow: inset 0 -.2rem var(--colour-ivory);
+}
+
+.mat54 .nose .headlight {
+    background: var(--colour-grey);
+    border-radius: 40%;
+    display: block;
+    height: .7rem;
+    left: -.3rem;
+    top: 2.2rem;
+    width: .8rem;
+    z-index: 5;
+}
+
+.mat54.green .nose .headlight {
+    background-color: var(--colour-ivory);
+}
+
+.mat54 .nose .headlight::before {
+    background-color: var(--colour-oldyellow);
+    border-radius: .2rem;
+    content: '';
+    display: block;
+    height: 1rem;
+    left: .5rem;
+    opacity: .8;
+    position: absolute;
+    top: -1.5rem;
+    width: 1rem;
+}
+
+.mat54.green .nose .headlight::after {
+    border-right: 2.5rem solid transparent;
+    border-top: .7rem solid var(--colour-ivory);
+    content: '';
+    display: block;
+    height: 0;
+    left: .6rem;
+    position: absolute;
+    width: 0;
+}
+
+.mat54.green .nose .headlight::before {
+    background-color: var(--colour-green);
+}
+
+.mat54 .chin {
+    background: var(--colour-grey);
+    border-radius: .7rem;
+    bottom: -.9rem;
+    display: block;
+    height: 2.2rem;
+    left: -4rem;
+    position: absolute;
+    transform: scaleX(1.3) rotate(45deg);
+    width: 2.2rem;
+}
+
+.mat54 .ns-logo {
+    background-color: black;
+    left: 2.8rem;
+    top: 4.4rem;
+    transform: scale(1.2);
+}
+
+.mat54.yellow .ns-logo {
+    left: 15.5rem;
+}
+
+.mat54.green .ns-logo {
+    display: none;
+}
+
+.mat54 .ns-logo:nth-child(2n+2) {
+    left: 38.5rem;
+}
+
+.mat54 .door {
+    border: .05rem solid #333;
+}
+
+.mat54 .driver.door {
+    background-color: transparent;
+    box-shadow: inset 0 -.3rem 0 var(--colour-grey);
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    height: 4.2rem;
+    left: .5rem;
+    top: 1.5rem;
+    width: 1.2rem;
+}
+
+.mat54 .intercity-line {
+    background-color: var(--colour-oldblue);
+    border-radius: .2rem;
+    height: 2rem;
+    left: 2.3rem;
+    top: 1.7rem;
+    width: 38rem;
+}
+
+.mat54.yellow .intercity-line,
+.mat54.green .intercity-line  {
+    display: none;
+}
+
+.mat54 .windows {
+    display: flex;
+    top: 1.9rem;
+    z-index: 10;
+}
+
+.mat54 .car .windows:nth-child(2n) {
+    left: 2.2rem;
+}
+
+.mat54 .car .windows:nth-child(2n+1) {
+    left: 14.3rem;
+}
+
+.mat54 .window {
+    background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
+    border: .05rem solid #333;
+    border-radius: .2rem;
+    height: 1.5rem;
+    margin: 0 .55rem;
+    position: static;
+    width: 2.3rem;
+}
+
+.mat54.green .window {
+    border-color: var(--colour-ivory);
+}
+
+.mat54 .windows .window hr {
+    border: 0;
+    border-top: .1rem solid #555;
+    position: static;
+}
+
+.mat54.green .windows .window hr {
+    border-color: var(--colour-ivory);
+}
+
+.mat54 .normal.window {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.mat54 .driver.door > .window {
+    margin: .4rem .3rem;
+    width: .6rem;
+}
+
+.mat54 .passenger.doors {
+    display: flex;
+    left: 10.1rem;
+    top: 1.5rem;
+}
+
+.mat54 .passenger.doors .door {
+    background-color: transparent;
+    box-shadow: inset 0 -.6rem 0 var(--colour-grey);
+    position: static;
+    height: 4.2rem;
+    width: 1.5rem;
+}
+
+.mat54.yellow .passenger.doors .door {
+    background-color: var(--colour-grey);
+}
+
+.mat54 .passenger.doors .door:nth-child(2n+1) {
+    border-top-left-radius: .2rem;
+}
+
+.mat54 .passenger.doors .door:nth-child(2n+2) {
+    border-top-right-radius: .2rem;
+    margin-left: -.05rem;
+}
+
+.mat54 .passenger.doors .window {
+    margin: .3rem .2rem;
+    width: 1rem;
+}
+
+.mat54 .small.window {
+    width: 1.1rem;
+}
+
+.mat54.green .small.window {
+    background: #ddd;
+}
+
+.mat54.green .small.window hr {
+    display: none;
+}
+
+.mat54 .blind {
+    background-color: white;
+    border: .05rem solid #333;
+    border-radius: .1rem;
+    height: .3rem;
+    left: 14.7rem;
+    top: 1.3rem;
+    width: 1.5rem;
+}
+
+.mat54.yellow .blind {
+    display: none;
+}
+
+.mat54.green .blind {
+    background-color: var(--colour-ivory);
+    border: none;
+    height: .6rem;
+    left: 5.05rem;
+    top: 3.8rem;
+    width: 1.2rem;
+}
+
+.mat54 .stripes {
+    position: absolute;
+    left: 30.7rem;
+    top: 1.3rem;
+}
+
+.mat54 .stripe {
+    background: var(--colour-lightblue);
+    display: block;
+    float: left;
+    height: 4.3rem;
+    margin-right: .8rem;
+    position: static;
+    transform: skew(-27deg);
+    width: 2.5rem;
+}
+
+.mat54 .wheels {
+    top: 5.9rem;
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.mat54 .wheels:nth-child(2n+1) {
+    left: 1rem;
+}
+
+.mat54 .wheels:nth-child(2n+2) {
+    left: 39rem;
 }
