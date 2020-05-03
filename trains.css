@@ -1007,6 +1007,21 @@ a {
     width: 45rem;
 }
 
+.ddm.ddz .car {
+    background-color: var(--colour-blue);
+}
+
+.ddm.ddz .car::after {
+    background-color: #444;
+    content: '';
+    display: block;
+    height: 20rem;
+    left: 9rem;
+    position: absolute;
+    top: 7.5rem;
+    width: 32rem;
+}
+
 .ddm .car::before {
     background-color: var(--colour-oldyellow);
     clip-path: polygon(
@@ -1026,6 +1041,18 @@ a {
     width: 45rem;
 }
 
+.ddm.ddz .car::before {
+    background-color: var(--colour-yellow);
+    clip-path: polygon(
+        0 1rem,
+        10.8rem 1rem,
+        45rem 1rem,
+        45rem 2rem,
+        45rem 8rem,
+        0 8rem
+    );
+}
+
 .ddm .driver-windows {
     background-color: #333;
     clip-path: polygon(
@@ -1037,6 +1064,10 @@ a {
     height: 2rem;
     top: 2rem;
     width: 2.8rem;
+}
+
+.ddm.ddz .driver-windows {
+    display: none;
 }
 
 .ddm .front.driver-window {
@@ -1064,8 +1095,24 @@ a {
 
 .ddm .ns-logo {
     background-color: black;
-    left: 13.2rem;
-    top: 3.4rem;
+    left: 12.9rem;
+    top: 3.2rem;
+}
+
+.ddm.ddz .ns-logo {
+    background-color: var(--colour-blue);
+    left: 15.9rem;
+    top: 3.1rem;
+}
+
+.ddm.ddz .blind {
+    background-color: #444;
+    border: .1rem solid #333;
+    border-radius: .2rem;
+    height: .4rem;
+    left: 36.6rem;
+    top: 2.9rem;
+    width: 1.5rem;
 }
 
 .ddm .upper.deck {
@@ -1074,10 +1121,23 @@ a {
     top: 1.5rem;
 }
 
+.ddm.ddz .upper.deck {
+    background-color: var(--colour-blue);
+    border-radius: .2rem;
+    padding: .1rem 0;
+    top: 1.4rem;
+}
+
 .ddm .lower.deck {
     display: flex;
     left: 10rem;
     top: 4.6rem;
+}
+
+.ddm.ddz .lower.deck {
+    background-color: var(--colour-blue);
+    padding: .3rem 0 .1rem;
+    top: 4.3rem;
 }
 
 .ddm .window {
@@ -1094,6 +1154,10 @@ a {
     margin: 0 .3rem;
     position: static;
     width: 2.3rem;
+}
+
+.ddm.ddz .window {
+    box-shadow: none;
 }
 
 .ddm .deck .window:first-child,
@@ -1122,6 +1186,7 @@ a {
     left: 22.7rem;
     top: 5rem;
     width: 1.6rem;
+    z-index: 10;
 }
 
 .ddm .stripes {
@@ -1155,6 +1220,48 @@ a {
 .ddm .doors {
     display: flex;
     top: 2.5rem;
+    z-index: 2;
+}
+
+.ddm.ddz .doors::before {
+    background-color: var(--colour-blue);
+    border-radius: .2rem;
+    content: '';
+    display: block;
+    height: 2.2rem;
+    left: -.8rem;
+    position: absolute;
+    top: .3rem;
+    width: 3.5rem;
+    z-index: -1;
+}
+
+.ddm.ddz .front.doors::after {
+    background-color: var(--colour-blue);
+    content: '';
+    display: block;
+    height: 2.2rem;
+    left: 2.6rem;
+    position: absolute;
+    top: 1.1rem;
+    transform: skewY(42deg);
+    width: 1.6rem;
+}
+
+.ddm.ddz .back.doors::before {
+    left: -1rem;
+}
+
+.ddm.ddz .back.doors::after {
+    background-color: var(--colour-blue);
+    content: '';
+    display: block;
+    height: 2.2rem;
+    left: -3rem;
+    position: absolute;
+    top: 1.1rem;
+    transform: skewY(-36deg);
+    width: 2.1rem;
 }
 
 .ddm .front.doors {
@@ -1175,9 +1282,30 @@ a {
     width: 50%;
 }
 
+.ddm.ddz .door {
+    background-color: transparent;
+}
+
 .ddm .doors .door:nth-child(2n+1) {
     border-top-left-radius: .2rem;
     margin-right: -.025rem;
+}
+
+.ddm.ddz .doors .door:nth-child(2n+1)::after {
+    background-color: white;
+    content: '';
+    display: block;
+    height: .5rem;
+    left: 1.03rem;
+    position: absolute;
+    top: 1.9rem;
+    transform: rotate(45deg);
+    width: .5rem;
+    z-index: -1;
+}
+
+.ddm.ddz .back.doors .door:nth-child(2n+1)::after {
+    left: 1.4rem;
 }
 
 .ddm .doors .door:nth-child(2n+2) {
