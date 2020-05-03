@@ -1,7 +1,7 @@
 :root {
     --colour-blue: #0052a4;
     --colour-green: #156e46;
-    --colour-grey: #646464;
+    --colour-grey: #777;
     --colour-ivory: #f5f5ce;
     --colour-lightblue: #4082f4;
     --colour-oldblue: #004294;
@@ -17,6 +17,7 @@
 
     .slt,
     .virm,
+    .ddm,
     .loc1700,
     .icm,
     .mat64,
@@ -677,7 +678,7 @@ a {
     left: 1.9rem;
     top: 1.4rem;
     transform: rotate(25deg);
-    width: 4.7rem;
+    width: 4.5rem;
 }
 
 .virm .doors .door {
@@ -837,6 +838,8 @@ a {
 .virm.modern .lower-deck {
     background-color: var(--colour-blue);
     height: 2rem;
+    left: 2.9rem;
+    padding-left: 4.3rem;
     top: 3.8rem;
     width: calc(24.5rem - 4rem);
 }
@@ -933,7 +936,7 @@ a {
     position: absolute;
     top: 1.2rem;
     transform: rotate(-25deg);
-    width: 4.8rem;
+    width: 4.7rem;
     z-index: 6;
 }
 
@@ -963,9 +966,253 @@ a {
 
 /**
  * -----------------------------------------------------------------------------
+ * DDM
+ * -----------------------------------------------------------------------------
+ */
+
+.ddm {
+    left: 2rem;
+    position: absolute;
+    top: 2.3rem;
+}
+
+.ddm * {
+    display: block;
+    position: absolute;
+}
+
+.ddm .car {
+    background-color: var(--colour-grey);
+    clip-path: polygon(
+        6rem 0,
+        41.5rem 0,
+        43rem 1rem,
+        45rem 1rem,
+        45rem 6.9rem,
+        40.5rem 6.9rem,
+        39rem 8.2rem,
+        10.6rem 8.2rem,
+        9.5rem 7rem,
+        2.4rem 7rem,
+        2.2rem 7.2rem,
+        .2rem 7.2rem,
+        .2rem 6.6rem,
+        .2rem 4.3rem,
+        .4rem 4rem,
+        .5rem 4rem,
+        1rem 2rem,
+        3rem 1rem
+    );
+    height: 8.2rem;
+    width: 45rem;
+}
+
+.ddm .car::before {
+    background-color: var(--colour-oldyellow);
+    clip-path: polygon(
+        0 2rem,
+        8.5rem 2rem,
+        10.8rem 1rem,
+        39.3rem 1rem,
+        41.3rem 2rem,
+        45rem 2rem,
+        45rem 8rem,
+        0 8rem
+    );
+    content: '';
+    display: block;
+    height: 7.5rem;
+    position: absolute;
+    width: 45rem;
+}
+
+.ddm .driver-windows {
+    background-color: #333;
+    clip-path: polygon(
+        0 0,
+        2.8rem .5rem,
+        2.8rem 1.8rem,
+        0 2rem
+    );
+    height: 2rem;
+    top: 2rem;
+    width: 2.8rem;
+}
+
+.ddm .front.driver-window {
+    background-color: #555;
+    border-radius: .2rem;
+    height: 1.5rem;
+    left: .1rem;
+    top: .25rem;
+    transform: rotate(15deg);
+    width: 1rem;
+}
+
+.ddm .side.driver-window {
+    background-color: #555;
+    clip-path: polygon(
+        .5rem .5rem,
+        1.6rem .7rem,
+        1.6rem 1.6rem,
+        .1rem 1.8rem
+    );
+    height: 2rem;
+    left: 1rem;
+    width: 2rem;
+}
+
+.ddm .ns-logo {
+    background-color: black;
+    left: 13.2rem;
+    top: 3.4rem;
+}
+
+.ddm .upper.deck {
+    display: flex;
+    left: 10rem;
+    top: 1.5rem;
+}
+
+.ddm .lower.deck {
+    display: flex;
+    left: 10rem;
+    top: 4.6rem;
+}
+
+.ddm .window {
+    background: repeating-linear-gradient(
+        45deg,
+        #8ba1b7,
+        #95a7bc 1rem
+    );
+    border: .05rem solid #333;
+    border-radius: .2rem;
+    box-shadow: 0 -.8rem 0 -.5rem var(--colour-grey),
+                0 -.7rem 0 -.5rem var(--colour-grey);
+    height: 1rem;
+    margin: 0 .3rem;
+    position: static;
+    width: 2.3rem;
+}
+
+.ddm .deck .window:first-child,
+.ddm .deck .window:last-child {
+    box-shadow: none;
+    width: 1.6rem;
+}
+
+.ddm .lower.deck .window {
+    box-shadow: none;
+    height: 1.7rem;
+}
+
+.ddm .lower.deck .window:nth-child(4),
+.ddm .lower.deck .window:nth-child(5) {
+    visibility: hidden;
+}
+
+.ddm .vent {
+    background: repeating-linear-gradient(
+        90deg,
+        #333,
+        transparent .1rem
+    );
+    height: 1.3rem;
+    left: 22.7rem;
+    top: 5rem;
+    width: 1.6rem;
+}
+
+.ddm .stripes {
+    position: absolute;
+    left: 29rem;
+    top: 2.8rem;
+    width: 30rem;
+}
+
+.ddm .stripe {
+    background: var(--colour-lightblue);
+    display: block;
+    float: left;
+    height: 4.5rem;
+    margin-right: .7rem;
+    position: static;
+    transform: skew(-25deg);
+    width: 2.5rem;
+}
+
+.ddm .driver.door {
+    background-color: transparent;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    left: 3.2rem;
+    position: absolute;
+    top: 2.5rem;
+    width: 1rem;
+}
+
+.ddm .doors {
+    display: flex;
+    top: 2.5rem;
+}
+
+.ddm .front.doors {
+    left: 5.8rem;
+    width: 2.6rem;
+}
+
+.ddm .back.doors {
+    left: 41.5rem;
+    width: 4rem;
+}
+
+.ddm .door {
+    background-color: var(--colour-grey);
+    border: .05rem solid #333;
+    height: 4.4rem;
+    position: static;
+    width: 50%;
+}
+
+.ddm .doors .door:nth-child(2n+1) {
+    border-top-left-radius: .2rem;
+    margin-right: -.025rem;
+}
+
+.ddm .doors .door:nth-child(2n+2) {
+    border-top-right-radius: .2rem;
+    margin-left: -.025rem;
+}
+
+.ddm .door .window {
+    height: 1.5rem;
+    margin: .4rem 18%;
+    width: 50%;
+}
+
+.ddm .wheels {
+    top: 7rem;
+    transform: scale(1.2);
+}
+
+.ddm .wheels:nth-child(2n+1) {
+    left: 4.5rem;
+}
+
+.ddm .wheels:nth-child(2n+2) {
+    left: 42rem;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
  * 1700
  * -----------------------------------------------------------------------------
  */
+
 .loc1700 {
     left: 2rem;
     position: absolute;
@@ -1760,7 +2007,7 @@ a {
 .sgm .window {
     background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
     border: .05rem solid #333;
-    border-radius: .3rem;
+    border-radius: .2rem;
     height: 1.7rem;
     margin: .05rem .4rem 0;
     position: static;
@@ -2040,7 +2287,7 @@ a {
 
 .mat64 .window {
     border: .05rem solid #555;
-    border-radius: .3rem;
+    border-radius: .2rem;
     height: 2rem;
     margin: .8rem .35rem 0;
 }
