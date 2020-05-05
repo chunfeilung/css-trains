@@ -17,10 +17,12 @@
 
     .sng,
     .slt,
+    .loc186,
     .virm,
     .ddm,
     .loc1700,
     .icm,
+    .sgm,
     .mat64,
     .mat54 {
         left: 1rem !important;
@@ -461,7 +463,7 @@ a {
 }
 
 .sng .headlight {
-    background-color: #446;
+    background-color: #aae;
     border-radius: 50%;
     clip-path: polygon(
         .1rem 1.3rem,
@@ -500,7 +502,7 @@ a {
         #cbe1e7,
         #d5e7ec 1rem
     );
-    border: .1rem solid #333;
+    border: .05rem solid #333;
     border-radius: .2rem;
     height: 2.1rem;
     margin: 0 .3rem;
@@ -567,7 +569,7 @@ a {
 
 .sng .door .window {
     height: 2.3rem;
-    margin: .3rem .25rem;
+    margin: .3rem .3rem;
     position: static;
     width: .6rem;
 }
@@ -869,6 +871,231 @@ a {
 
 .slt .wheels-2 {
     left: 27.7rem;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * BOMBARDIER TRAXX
+ * -----------------------------------------------------------------------------
+ */
+
+.loc186 {
+    left: 2rem;
+    position: absolute;
+    top: 3.8rem;
+}
+
+.loc186 * {
+    display: block;
+    position: absolute;
+}
+
+.loc186 .front {
+    height: 7.2rem;
+    width: 17rem;
+}
+
+.loc186 .pantograph {
+    top: -2.3rem;
+}
+
+.loc186 .pantograph:nth-child(1) {
+    left: 6rem;
+}
+
+.loc186 .pantograph:nth-child(2) {
+    left: 8rem;
+}
+
+.loc186 .pantograph .collector {
+    background-color: var(--colour-grey);
+    height: .2rem;
+    width: .8rem;
+}
+
+.loc186 .pantograph .control {
+    background-color: var(--colour-grey);
+    height: .8rem;
+    width: 1.5rem;
+}
+
+.loc186 .pantograph .control {
+    top: 1.8rem;
+}
+
+.loc186 .pantograph.down .collector {
+    top: 1.5rem;
+}
+
+.loc186 .pantograph:nth-child(2) .collector {
+    left: .6rem;
+}
+
+.loc186 .pantograph.down .arm {
+    background-color: var(--colour-grey);
+    height: .4rem;
+    left: -2.8rem;
+    top: 1.7rem;
+    width: 3.5rem;
+}
+
+.loc186 .pantograph.down:nth-child(2) .arm {
+    left: .7rem;
+}
+
+.loc186 .pantograph.up .arm,
+.loc186 .pantograph.up .arm::after {
+    background-color: var(--colour-grey);
+    height: .2rem;
+    left: .8rem;
+    transform: rotate(20deg);
+    top: .6rem;
+    width: 3.5rem;
+}
+
+.loc186 .pantograph.up .arm::after {
+    content: '';
+    display: block;
+    left: .4rem;
+    position: absolute;
+    top: 1.1rem;
+    transform: rotate(-40deg);
+}
+
+
+.loc186 .front .roof {
+    background-color: var(--colour-grey);
+    height: 1rem;
+    left: 5rem;
+    top: .2rem;
+    width: 12rem;
+}
+
+.loc186 .front .car {
+    background-color: var(--colour-yellow);
+    clip-path: polygon(
+        17rem 1rem,
+        17rem 5.5rem,
+        2.6rem 5.5rem,
+        2.2rem 5.6rem,
+        .6rem 5.6rem,
+        .6rem 4.5rem,
+        0 4.5rem,
+        0 4rem,
+        .1rem 3rem,
+        .5rem 2rem,
+        1rem 1rem,
+        1.5rem .3rem,
+        2rem 0,
+        5.5rem 0,
+        5.5rem 1rem
+    );
+    height: 7.2rem;
+    width: 17rem;
+    z-index: 5;
+}
+
+.loc186 .front .driver-window {
+    background-color: #333;
+    clip-path: polygon(
+        .4rem 0,
+        .9rem 0,
+        .9rem 1.1rem,
+        0 1.1rem,
+        0 .4rem
+    );
+    height: 1.1rem;
+    left: 2.3rem;
+    top: 1.2rem;
+    width: .9rem;
+    z-index: 10;
+}
+
+.loc186 .front .door {
+    border-left: .1rem solid #aaa;
+    border-right: .1rem solid #aaa;
+    height: 3.5rem;
+    left: 3.5rem;
+    top: 1.2rem;
+    width: 1.5rem;
+    z-index: 10;
+}
+
+.loc186 .front .ns-logo {
+    background-color: var(--colour-white);
+    left: 5.9rem;
+    top: 2.3rem;
+    z-index: 10;
+}
+
+.loc186 .center {
+    background-color: var(--colour-blue);
+    clip-path: polygon(
+        15.9rem 0,
+        15.9rem 2.9rem,
+        .4rem 2.9rem,
+        .2rem 2.8rem,
+        0 2.4rem,
+        .5rem 1.1rem,
+        .8rem .5rem,
+        1rem .2rem,
+        1.4rem 0
+    );
+    height: 2.9rem;
+    left: 1.2rem;
+    top: 1rem;
+    width: 15.9rem;
+}
+
+.loc186 .front .coupler {
+    background-color: #333;
+    height: .5rem;
+    left: -.5rem;
+    top: 4.8rem;
+    width: 2rem;
+}
+
+.loc186 .front .coupler::after {
+    background-color: #333;
+    clip-path: polygon(
+        0 0,
+        2rem 0,
+        2rem 1.6rem,
+        0 2rem
+    );
+    content: '';
+    display: block;
+    height: 2rem;
+    left: .5rem;
+    position: absolute;
+    top: -.5rem;
+    width: 2rem;
+}
+
+.loc186 .front .belly {
+    background-color: #444;
+    height: 1rem;
+    left: 12rem;
+    top: 5.5rem;
+    width: 5rem;
+}
+
+.loc186 .front .wheels {
+    left: 5.3rem;
+    top: 5.5rem;
+    transform: scale(1.3);
+}
+
+.loc186 .front.mirrored {
+    left: 16.9rem;
+    transform: scaleX(-1);
+}
+
+.loc186 .front.mirrored .ns-logo {
+    transform: scaleX(-1);
 }
 
 
