@@ -2,6 +2,7 @@
 Illustrations of Dutch rolling stock, created entirely using HTML and CSS.
 
 Currently included:
+* Sprinter Nieuwe Generatie
 * Sprinter Lighttrain
 * Verlengd interregiomaterieel
 * Dubbeldeksmaterieel

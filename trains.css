@@ -15,6 +15,7 @@
         font-size: .8rem;
     }
 
+    .sng,
     .slt,
     .virm,
     .ddm,
@@ -272,9 +273,335 @@ a {
 
 /**
  * -----------------------------------------------------------------------------
+ * SPRINTER NIEUWE GENERATIE
+ * -----------------------------------------------------------------------------
+ */
+
+.sng {
+    left: 2rem;
+    position: absolute;
+    top: 3.6rem;
+}
+
+.sng * {
+    display: block;
+    position: absolute;
+}
+
+.sng .boxes {
+    background-color: var(--colour-grey);
+    height: 1rem;
+    left: 5rem;
+    top: .3rem;
+    width: 25rem;
+}
+.sng .first.car {
+    background-color: var(--colour-white);
+    box-shadow: inset 0 -.2rem 0 0rem var(--colour-yellow);
+    clip-path: polygon(
+        3.7rem 0,
+        38.4rem 0,
+        38.4rem 5.2rem,
+        35.9rem 5.2rem,
+        35.8rem 5.23rem,
+        35.7rem 5.28rem,
+        35.6rem 5.35rem,
+        35.5rem 5.55rem,
+        35.5rem 5.7rem,
+        12.7rem 5.7rem,
+        12.7rem 5.6rem,
+        12.7rem 5.6rem,
+        12.6rem 5.4rem,
+        12.5rem 5.3rem,
+        12.3rem 5.2rem,
+        4rem 5.2rem,
+        3.5rem 6rem,
+        .2rem 5.7rem,
+        .1rem 5.6rem,
+        0 5.5rem,
+        0 5rem,
+        .2rem 4rem,
+        .6rem 3rem,
+        .9rem 2.5rem,
+        1.2rem 2rem,
+        2rem 1rem,
+        2.5rem .6rem,
+        3.1rem .2rem
+    );
+    height: 5.7rem;
+    top: .6rem;
+    width: 38.4rem;
+    z-index: 5;
+}
+
+.sng .first.car::before,
+.sng .first.car::after,
+.sng .second.car::before {
+    background-color: var(--colour-yellow);
+    border-radius: .5rem;
+    content: '';
+    display: block;
+    height: 1rem;
+    position: absolute;
+    top: 5.05rem;
+    width: 12.8rem;
+}
+
+.sng .first.car::after {
+    left: 35.4rem;
+}
+
+.sng .second.car::before {
+    left: -10rem;
+}
+
+.sng .first.car .roof {
+    background-color: var(--colour-blue);
+    clip-path: polygon(
+        40rem 0rem,
+        40rem .7rem,
+        3rem .7rem,
+        2.6rem 1rem,
+        2.2rem 1.4rem,
+        1.6rem 2rem,
+        .9rem 3rem,
+        0rem 3rem,
+        0 0
+    );
+    height: 3rem;
+    width: 40rem;
+}
+
+.sng .second.car {
+    background-color: var(--colour-yellow);
+    box-shadow: inset 0 .7rem var(--colour-blue),
+                inset 0 1rem var(--colour-white),
+                inset 0 4.6rem var(--colour-blue),
+                inset 0 5.45rem var(--colour-white);
+    clip-path: polygon(
+        0 0,
+        5rem 0,
+        5rem 5.7rem,
+
+        2.7rem 5.6rem,
+        2.6rem 5.4rem,
+        2.5rem 5.3rem,
+        2.3rem 5.2rem,
+
+        1.7rem 5.2rem,
+        0 5.2rem
+    );
+    height: 5.7rem;
+    left: 39.2rem;
+    padding-left: .6rem;
+    top: .6rem;
+    width: 5rem;
+    z-index: 5;
+}
+
+.sng .first.car .blue-strip {
+    background-color: var(--colour-blue);
+    clip-path: polygon(
+        4.6rem 0,
+        39rem 0,
+        39rem 3.6rem,
+        1.8rem 3.6rem,
+        0 2.3rem
+    );
+    height: 3.6rem;
+    left: 2.1rem;
+    top: 1rem;
+    width: 39rem;
+}
+
+.sng .ns-logo {
+    background-color: var(--colour-blue);
+    left: 22.6rem;
+    top: 4.7rem;
+    transform: scale(.7);
+}
+
+.sng .side.window {
+    background: none;
+    background-color: #333;
+    border: none;
+    clip-path: polygon(
+        1.5rem 0,
+        4.3rem 0,
+        4.4rem .1rem,
+        .5rem 2.1rem,
+        0rem 1.7rem,
+        .8rem .6rem
+    );
+    left: 1.2rem;
+    height: 2.1rem;
+    position: absolute;
+    top: 1rem;
+    width: 4.4rem;
+    z-index: 49;
+}
+
+.sng .side.window::after {
+    background: none;
+    background-color: #444;
+    border: none;
+    content: '';
+    clip-path: polygon(
+        1.6rem .1rem,
+        4.1rem .1rem,
+        .5rem 1.9rem,
+        .2rem 1.7rem,
+        .9rem .7rem
+    );
+    display: block;
+    height: 2rem;
+    position: absolute;
+    width: 4.3rem;
+    z-index: 50;
+}
+
+.sng .headlight {
+    background-color: #446;
+    border-radius: 50%;
+    clip-path: polygon(
+        .1rem 1.3rem,
+        1rem .2rem,
+        1rem 3rem
+
+    );
+    height: 2rem;
+    left: .3rem;
+    transform: rotate(40deg);
+    top: 2rem;
+    width: .8rem;
+}
+
+.sng .nose {
+    background-color: #444;
+    clip-path: polygon(
+        0 0,
+        4rem 1.2rem,
+        4rem 2rem,
+        0 2rem
+    );
+    height: 2rem;
+    top: 4rem;
+    width: 4rem;
+}
+
+.sng .windows {
+    display: flex;
+    top: 1.5rem;
+}
+
+.sng .window {
+    background: repeating-linear-gradient(
+        45deg,
+        #cbe1e7,
+        #d5e7ec 1rem
+    );
+    border: .1rem solid #333;
+    border-radius: .2rem;
+    height: 2.1rem;
+    margin: 0 .3rem;
+    position: static;
+    width: 1.9rem;
+}
+
+.sng .first.windows {
+    left: 6.6rem;
+    width: 40rem;
+}
+
+.sng .first.windows .window:nth-child(3n+1),
+.sng .first.windows .window:nth-child(3n+2),
+.sng .third.windows .window:nth-child(2n+2),
+.sng .second.car .window:first-child {
+    height: 1.7rem;
+    width: 2.3rem;
+}
+
+.sng .first.windows .window:nth-child(3n+3),
+.sng .third.windows .window:nth-child(2n+2) {
+    margin-left: .5rem;
+}
+
+.sng .second.windows {
+    left: 19.5rem;
+}
+
+.sng .third.windows {
+    left: 31.8rem;
+}
+
+.sng .doors {
+    display: flex;
+    top: 1rem;
+}
+
+.sng .car .front.doors {
+    left: 16.1rem;
+}
+
+.sng .car .middle.doors {
+    left: 28.4rem;
+}
+
+.sng .door {
+    background-color: var(--colour-yellow);
+    border: .05rem solid #333;
+    box-shadow: inset 0 -.4rem var(--colour-grey);
+    height: 4.8rem;
+    position: static;
+    width: 1.3rem;
+}
+
+.sng .doors .door:first-child {
+    margin-right: -.05rem;
+    border-top-left-radius: .2rem;
+}
+
+.sng .doors .door:nth-child(2n+2) {
+    border-top-right-radius: .2rem;
+}
+
+.sng .door .window {
+    height: 2.3rem;
+    margin: .3rem .25rem;
+    position: static;
+    width: .6rem;
+}
+
+.sng .gangway {
+    background-color: #444;
+    height: 4.6rem;
+    left: 38.4rem;
+    top: 1.1rem;
+    width: .8rem;
+}
+
+.sng .wheels {
+    top: 5.8rem;
+    transform: scale(1.1);
+}
+
+.sng .first.wheels {
+    left: 7.8rem;
+}
+
+.sng .second.wheels {
+    left: 37rem;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
  * SPRINTER LIGHTTRAIN
  * -----------------------------------------------------------------------------
  */
+
 .slt {
     display: flex;
     justify-content: flex-start;
