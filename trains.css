@@ -16,6 +16,7 @@
     }
 
     .sng,
+    .flirt,
     .slt,
     .loc186,
     .virm,
@@ -593,6 +594,303 @@ a {
 
 .sng .second.wheels {
     left: 37rem;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * FLIRT
+ * -----------------------------------------------------------------------------
+ */
+
+.flirt {
+    left: 2rem;
+    position: absolute;
+    top: 3.7rem;
+}
+
+.flirt * {
+    display: block;
+    position: absolute;
+}
+
+.flirt .first.car {
+    background-color: var(--colour-white);
+    box-shadow: inset 0 -.6rem var(--colour-yellow);
+    clip-path: polygon(
+        4.5rem 0,
+        22.3rem 0,
+        22.4rem .2rem,
+        22.5rem .4rem,
+        22.7rem .5rem,
+        23rem .6rem,
+        42rem .6rem,
+        42rem 5.7rem,
+        41.5rem 5.7rem,
+        41rem 6.2rem,
+        13.5rem 6.2rem,
+        12.5rem 5.7rem,
+        8rem 5.7rem,
+        6rem 6.6rem,
+        3rem 6.6rem,
+        2.5rem 6.5rem,
+        2rem 6.3rem,
+        1.6rem 6.1rem,
+        1.4rem 6rem,
+        1.2rem 5.5rem,
+        1.1rem 4.4rem,
+        1.3rem 3.6rem,
+        2rem 2rem,
+        3rem .8rem,
+        3.5rem .4rem,
+        4rem .1rem
+    );
+    height: 6.6rem;
+    width: 42rem;
+    z-index: 5;
+}
+
+.flirt .second.car {
+    background-color: var(--colour-blue);
+    box-shadow: inset 0 -1.3rem var(--colour-white),
+                inset 0 -4.8rem var(--colour-blue),
+                inset 0 -5.2rem var(--colour-white),
+                -3rem 0 0 -.5rem var(--colour-grey);
+    height: 5.7rem;
+    left: 43rem;
+    top: .5rem;
+    width: 4rem;
+}
+
+.flirt .first.car .roof {
+    background-color: var(--colour-blue);
+    clip-path: polygon(
+        0 0,
+        42rem 0,
+        42rem 1rem,
+        4.5rem 1rem,
+        4rem 1.1rem,
+        3.5rem 1.2rem,
+        3.1rem 1.5rem,
+        2.1rem 2.5rem,
+        1.3rem 3.9rem,
+        0 3.9rem
+    );
+    height: 4rem;
+    width: 42rem;
+}
+
+.flirt .driver-window {
+    background: #333;
+    clip-path: polygon(
+        1.3rem 0,
+        2.2rem 0,
+        1.6rem 1.7rem,
+        .3rem 1.7rem,
+        0 1.4rem,
+        .2rem .9rem,
+        .8rem .3rem,
+        1.1rem .1rem
+    );
+    height: 1.7rem;
+    left: 2.4rem;
+    top: 1.6rem;
+    width: 2.2rem;
+}
+
+.flirt .driver-window::after {
+    background: #555;
+    clip-path: polygon(
+        1.4rem .1rem,
+        2.1rem .1rem,
+        1.5rem 1.6rem,
+        .4rem 1.6rem,
+        .1rem 1.4rem,
+        .3rem 1rem,
+        .9rem .4rem,
+        1.2rem .2rem
+    );
+    content: '';
+    display: block;
+    height: 1.7rem;
+    position: absolute;
+    width: 2.2rem;
+}
+
+.flirt .driver-door {
+    border-left: .1rem solid #333;
+    border-right: .1rem solid #333;
+    left: 4.8rem;
+    height: 3rem;
+    top: 2.5rem;
+    width: 1.4rem;
+}
+
+.flirt .chin {
+    background-color: #444;
+    clip-path: polygon(
+        0 .5rem,
+        1.9rem 0,
+        3rem 1rem,
+        4rem 1.5rem,
+        5rem 1.7rem,
+        6rem 1.8rem,
+        8rem 1.8rem,
+        8rem 3rem,
+        0 3rem
+    );
+    height: 3rem;
+    top: 4rem;
+    width: 8rem;
+}
+
+.flirt .banner {
+    background-color: var(--colour-blue);
+    clip-path: polygon(
+        35rem 0,
+        35rem 3.5rem,
+        4rem 3.5rem,
+        3rem 3.4rem,
+        2rem 3.2rem,
+        1rem 2.8rem,
+        0 2.2rem,
+        .5rem 1.4rem,
+        1rem .9rem,
+        1.5rem .5rem,
+        2rem .2rem,
+        3rem 0
+    );
+    height: 3.5rem;
+    left: 7.2rem;
+    top: 1.4rem;
+    width: 35rem;
+}
+
+.flirt .driver-door .window {
+    background: #555;
+    height: 1rem;
+    margin: 0 .3rem;
+    position: absolute;
+    top: -.6rem;
+    width: .6rem;
+}
+
+.flirt .windows {
+    display: flex;
+    top: 2.4rem;
+}
+
+.flirt .first-class.windows {
+    left: 11.6rem;
+}
+
+.flirt .first-class.windows::before {
+    background-color: var(--colour-white);
+    content: '';
+    display: block;
+    height: .2rem;
+    left: 5%;
+    position: absolute;
+    top: -.6rem;
+    width: 90%;
+}
+
+.flirt .middle.windows {
+    left: 21.5rem;
+}
+
+.flirt .back.windows {
+    left: 34.7rem;
+}
+
+.flirt .window {
+    background: repeating-linear-gradient(
+        45deg,
+        #cbe1e7,
+        #d5e7ec 1rem
+    );
+    border: .1rem solid #333;
+    border-radius: .2rem;
+    height: 2rem;
+    margin: 0 .4rem;
+    position: static;
+    width: 2.25rem;
+}
+
+.flirt .small.window {
+    height: 1.6rem;
+}
+
+.flirt .window.with.sign {
+    box-shadow: inset 0 .6rem #333;
+}
+
+.flirt .window hr {
+    border: 0;
+    border-top: .1rem solid #333;
+    position: static;
+    z-index: 20;
+}
+
+.flirt .doors {
+    display: flex;
+    top: 1.6rem;
+}
+
+.flirt .car .front.doors {
+    left: 18.3rem;
+}
+
+.flirt .car .middle.doors {
+    left: 31.4rem;
+}
+
+.flirt .door {
+    background-color: var(--colour-yellow);
+    border: .1rem solid var(--colour-blue);
+    box-shadow: inset 0 -.1rem var(--colour-grey);
+    height: 4.8rem;
+    position: static;
+    width: 1.4rem;
+}
+
+.flirt .doors .door:first-child {
+    margin-right: -.05rem;
+    border-top-left-radius: .2rem;
+    border-right: .05rem solid #333;
+}
+
+.flirt .doors .door:nth-child(2n+2) {
+    border-top-right-radius: .2rem;
+    border-left: .05rem solid #333;
+}
+
+.flirt .door .window {
+    height: 2.2rem;
+    margin: .6rem .3rem;
+    position: static;
+    width: .7rem;
+}
+
+.flirt .ns-logo {
+    left: 25.3rem;
+    top: 5rem;
+    transform: scale(1.1);
+}
+
+.flirt .wheels {
+    top: 5.8rem;
+    transform: scale(1.1);
+}
+
+.flirt .first.wheels {
+    left: 8.3rem;
+}
+
+.flirt .second.wheels {
+    left: 40.7rem;
 }
 
 
