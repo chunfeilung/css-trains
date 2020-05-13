@@ -4,6 +4,7 @@ Illustrations of Dutch rolling stock, created entirely using HTML and CSS.
 Currently included:
 * Sprinter Nieuwe Generatie
 * Flirt
+* V250
 * Sprinter Lighttrain
 * Class 186
 * Verlengd interregiomaterieel

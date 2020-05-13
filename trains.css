@@ -17,6 +17,7 @@
 
     .sng,
     .flirt,
+    .v250,
     .slt,
     .loc186,
     .virm,
@@ -893,6 +894,210 @@ a {
     left: 40.7rem;
 }
 
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * V250 - HELPE, IT IS ON FYRA
+ * -----------------------------------------------------------------------------
+ */
+
+.v250 {
+    left: 2rem;
+    position: absolute;
+    top: 3.5rem;
+}
+
+.v250 * {
+    display: block;
+    position: absolute;
+}
+
+.v250 .nose {
+    background-color: var(--colour-white);
+    border-top-left-radius: 90% 70%;
+    height: 3.5rem;
+    top: 2.8rem;
+    width: 5rem;
+}
+
+.v250 .nose::before {
+    border-bottom: .6rem solid #444;
+    border-left: 2.5rem solid transparent;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 0;
+    right: 0;
+    position: absolute;
+    width: 0;
+}
+
+.v250 .nose::after {
+    background-color: #444;
+    border-bottom-left-radius: 90% 70%;
+    content: '';
+    display: block;
+    height: .5rem;
+    position: absolute;
+    top: 3.5rem;
+    width: 5rem;
+}
+
+.v250 .drivers-cabin {
+    background-color: var(--colour-white);
+    left: 4.8rem;
+    top: 2.8rem;
+    height: 2.9rem;
+    width: 4.5rem;
+}
+
+.v250 .drivers-cabin::before {
+    border-bottom: 2.8rem solid var(--colour-white);
+    border-left: 4.8rem solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    left: -.3rem;
+    position: absolute;
+    top: -2.8rem;
+    width: 0;
+}
+
+.v250 .drivers-window {
+    background-color: #333;
+    border: .1rem solid #444;
+    border-right-width: .5rem;
+    height: 1.1rem;
+    left: 3.8rem;
+    top: -1.4rem;
+    width: .7rem;
+    z-index: 10;
+}
+
+.v250 .drivers-window::before,
+.v250 .drivers-window::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+}
+
+.v250 .drivers-window::before {
+    border-bottom: 1.35rem solid #444;
+    border-left: 2rem solid transparent;
+    left: -2.1rem;
+    top: -.15rem;
+}
+
+.v250 .drivers-window::after {
+    border-top: 1.35rem solid #444;
+    border-right: 2.4rem solid transparent;
+    left: 1.2rem;
+    top: -.15rem;
+}
+
+
+.v250 .main {
+    background-color: var(--colour-white);
+    height: 5.7rem;
+    left: 9.2rem;
+    width: 40rem;
+    z-index: 2;
+}
+
+.v250 .main::after {
+    background-color: #444;
+    bottom: -1rem;
+    box-shadow: -8rem -.3rem 0 -.3rem #444,
+                8rem -.3rem 0 -.3rem #444;
+    content: '';
+    display: block;
+    height: 1rem;
+    left: 3.5rem;
+    position: absolute;
+    width: 25.5rem;
+    z-index: -1;
+}
+
+.v250 .fyra {
+    border-bottom: 1rem solid black;
+    border-left: 1rem solid transparent;
+    bottom: 0;
+    height: 0;
+    left: 24.2rem;
+    width: 0;
+}
+
+.v250 .fyra.red {
+    border-bottom: 5.7rem solid #c11721;
+    border-left-width: 34rem;
+    border-right: 5rem solid #c11721;
+    left: -4.2rem;
+}
+
+.v250 .fyra.purple {
+    border-bottom: 2.6rem solid #ad1766;
+    border-left-width: 12rem;
+    left: 24.2rem;
+}
+
+.v250 .door {
+    border: .1rem solid #333;
+    border-radius: .2rem;
+    height: 4.5rem;
+    left: 4.2rem;
+    top: 1.3rem;
+    width: 2rem;
+}
+
+.v250 .window {
+    background: repeating-linear-gradient(
+        45deg,
+        #cbe1e7,
+        #d5e7ec 1rem
+    );
+    border: .1rem solid #333;
+    height: 1.5rem;
+}
+
+.v250 .door .window {
+    border-radius: .2rem;
+    left: .6rem;
+    top: .5rem;
+    width: .9rem;
+}
+
+.v250 .windows {
+    background-color: #333;
+    display: flex;
+    height: 1.7rem;
+    left: 6.3rem;
+    padding-left: .8rem;
+    top: 1.8rem;
+    width: 30rem;
+}
+
+.v250 .windows .window {
+    margin: 0 .65rem;
+    position: static;
+    width: 2.3rem;
+}
+
+.v250 .wheels {
+    top: 6rem;
+    transform: scale(1.1);
+}
+
+.v250 .first.wheels {
+    left: 7.2rem;
+}
+
+.v250 .second.wheels {
+    left: 40rem;
+}
 
 
 
