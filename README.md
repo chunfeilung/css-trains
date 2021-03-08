@@ -1,4 +1,4 @@
-# Dutch trains in CSS
+# CSS trains
 Illustrations of Dutch rolling stock, created entirely using HTML and CSS.
 
 Currently included:
@@ -14,3 +14,4 @@ Currently included:
 * Stadsgewestelijk materieel
 * Mat ’64
 * Mat ’54
+* Class 1300

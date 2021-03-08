@@ -26,7 +26,8 @@
     .icm,
     .sgm,
     .mat64,
-    .mat54 {
+    .mat54,
+    .loc1300 {
         left: 1rem !important;
     }
 }
@@ -34,42 +35,31 @@
 body {
     background-color: /*cov*/#fefefe;
     font-family: Helvetica, Arial, sans-serif;
-    margin: 0;
+    margin: 0 0 5rem;
     padding: 0;
 }
 
 header {
-    background-color: var(--colour-oldblue);
-    border-top: 4rem solid var(--colour-oldyellow);
-    margin-bottom: 5rem;
+    margin: -2rem 0 5rem;
     padding: .5rem 0 0;
 }
 
-main,
-footer {
+main {
     margin: 1rem auto;
     max-width: 44rem;
 }
 
 h1 {
-    color: #fefefe;
-    font-size: 3.5rem;
-    letter-spacing: -.15rem;
-    margin: 0;
-    padding: 0;
-    position: relative;
+    font-size: 8rem;
     text-align: center;
-    top: .85rem;
 }
 
-h1 .ns-logo {
-    background-color: #fefefe;
+h1 .css {
+    background-color: var(--colour-yellow);
+    box-shadow: 1rem 1rem #888;
     display: inline-block;
-    margin: 0 2rem;
-    position: relative;
-    text-indent: -1000000rem;
-    top: 1.75rem;
-    transform: scale(3.2);
+    padding: 0 1.5rem;
+    transform: rotate(-5deg);
 }
 
 h2 {
@@ -79,22 +69,12 @@ h2 {
     padding: 0 2rem;
 }
 
-p,
-footer {
+p {
+    font-size: 1.1rem;
     line-height: 1.5;
     margin: 1rem auto;
     max-width: 40rem;
     padding: 0 2rem;
-}
-
-p {
-    font-size: 1.1rem;
-}
-
-footer {
-    color: #444;
-    margin: 8rem auto 1rem;
-    text-align: center;
 }
 
 a {
@@ -4063,4 +4043,339 @@ a {
 
 .mat54 .wheels:nth-child(2n+2) {
     left: 39rem;
+}
+
+/**
+ * -----------------------------------------------------------------------------
+ * 1300
+ * -----------------------------------------------------------------------------
+ */
+
+.loc1300 {
+    display: block;
+    height: 100%;
+    left: 2rem;
+    position: absolute;
+    top: .15rem;
+    width: 100%;
+}
+
+.loc1300 * {
+    display: block;
+    position: absolute;
+}
+
+.loc1300 .pantograph {
+    top: 1.4rem;
+    left: 9rem;
+}
+
+.loc1300 .pantograph .collector {
+    background-color: #555;
+    height: .4rem;
+    left: -.1rem;
+    width: 1rem;
+}
+
+.loc1300 .pantograph .arms {
+    border: .15rem solid #555;
+    height: 1.3rem;
+    left: -.4rem;
+    transform: scaleX(3) rotate(45deg);
+    top: .7rem;
+    width: 1.3rem;
+}
+
+.loc1300 .top {
+    background-color: #555;
+    height: .7rem;
+    left: 13.5rem;
+    top: 3.2rem;
+    width: 4.5rem;
+    z-index: 0;
+}
+
+.loc1300 .main {
+    background-color: var(--colour-oldyellow);
+    height: 4rem;
+    left: 1.8rem;
+    top: 4.5rem;
+    width: 16rem;
+    z-index: 1;
+}
+
+.loc1300 .main::before {
+    background-color: #444;
+    content: '';
+    display: block;
+    height: .6rem;
+    position: absolute;
+    right: 0;
+    top: -.6rem;
+    width: 13rem;
+    z-index: -1;
+}
+
+.loc1300 .base {
+    background-color: #444;
+    height: 1rem;
+    left: 1.4rem;
+    top: 8.5rem;
+    width: 16.4rem;
+    z-index: 3;
+}
+
+.loc1300 .head {
+    background: #444;
+    border-radius: 50%;
+    height: 1.2rem;
+    left: 1.8rem;
+    top: 3.9rem;
+    width: 6rem;
+}
+
+.loc1300 .nose {
+    border-bottom: 4rem solid var(--colour-oldyellow);
+    border-left: .6rem solid transparent;
+    height: 0;
+    left: 1.2rem;
+    top: 4.5rem;
+    width: 0;
+}
+
+.loc1300 .light {
+    background-color: #444;
+    border-radius: 0% 100% 100% 0% / 100% 50% 50% 0%;
+    height: .8rem;
+    left: -.5rem;
+    top: 3.1rem;
+    transform: rotate(8.53deg);
+    width: .4rem;
+}
+
+.loc1300 .top.light {
+    background-color: var(--colour-oldyellow);
+    border-radius: 0;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    height: .6rem;
+    left: -.6rem;
+    top: 1.9rem;
+    width: .4rem;
+}
+
+.loc1300 .coupler {
+    background-color: #444;
+    height: .5rem;
+    left: .5rem;
+    top: 8.5rem;
+    width: 1.2rem;
+    z-index: 0;
+}
+
+.loc1300 .coupler::before {
+    background-color: #444;
+    content: '';
+    display: block;
+    left: -.2rem;
+    position: absolute;
+    top: -.1rem;
+    width: .2rem;
+    height: .8rem;
+}
+
+.loc1300 .main .grey-ribbon::before {
+    border-bottom: 1.8rem solid #444;
+    border-left: .3rem solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    left: -.35rem;
+    position: absolute;
+    top: 0rem;
+    width: 0;
+}
+
+
+.loc1300 .main .grey-ribbon {
+    background: #444;
+    border-left: .1rem solid #444;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    height: 1.8rem;
+    margin-left: -.1rem;
+    top: .2rem;
+    width: 3.25rem;
+}
+
+.loc1300 .big-window {
+    background: repeating-linear-gradient(45deg, #8ba1b7, #95a7bc 1rem);
+    border: .05rem solid #333;
+    border-radius: .2rem;
+    height: 1.2rem;
+    left: 1.4rem;
+    top: .4rem;
+    width: 1.5rem;
+}
+
+.loc1300 .door,
+.loc1300 .steps {
+    background-color: var(--colour-oldyellow);
+    border: .1rem solid #444;
+    border-radius: .2rem;
+    height: 2.9rem;
+    left: 3.5rem;
+    top: .2rem;
+    width: .8rem;
+    z-index: 8;
+}
+
+.loc1300 .steps {
+    left: 3.3rem;
+    top: 1rem;
+    width: 1.2rem;
+    z-index: 7;
+}
+
+.loc1300 .ns-logo {
+    background-color: black;
+    left: 8.1rem;
+    top: 1.6rem;
+    transform: scale(3.5);
+}
+
+.loc1300 .windows {
+    left: 8.4rem;
+}
+
+.loc1300 .window {
+    background-color: #8ba1b7;
+    border: .2rem solid #444;
+    border-radius: 50%;
+    height: .8rem;
+    top: .3rem;
+    width: .8rem;
+}
+
+.loc1300 .window:nth-child(2) {
+    left: 4.4rem;
+}
+
+.loc1300 .wheelset {
+    border-top: 1rem solid #2a2a2a;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    height: 0;
+    left: 2.3rem;
+    top: 9.5rem;
+    width: 12.5rem;
+    z-index: 1;
+}
+
+.loc1300 .wheel {
+    background: #383838;
+    border-radius: 50%;
+    display: inline-block;
+    height: 1.6rem;
+    margin-left: 2.6rem;
+    position: relative;
+    top: -1.2rem;
+    width: 1.6rem;
+}
+
+.loc1300 .wheel:first-child {
+    margin-left: .9rem;
+}
+
+.loc1300 .front.mirrored {
+    left: 35rem;
+    transform: scaleX(-1);
+}
+
+.loc1300 .number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    left: 5.7rem;
+    letter-spacing: -.1rem;
+    top: 2rem;
+    transform: scaleX(-1);
+}
+
+.loc1300.dual .top,
+.loc1300.dual .head,
+.loc1300.dual .main,
+.loc1300.dual .door,
+.loc1300.dual .steps,
+.loc1300.dual .base {
+    background-color: #555;
+}
+
+.loc1300.dual .main::before {
+    background-color: #555;
+}
+
+.loc1300.dual .nose {
+    border-bottom-color: #555;
+}
+
+.loc1300.dual .top.light {
+    display: none;
+}
+
+.loc1300.dual .nose::before {
+    border-bottom: 2rem solid var(--colour-oldyellow);
+    border-left: .3rem solid transparent;
+    content: '';
+    display: block;
+    height: 0;
+    left: -.6rem;
+    position: absolute;
+    top: 2rem;
+    width: 0;
+    z-index: 9;
+}
+
+.loc1300.dual .nose::after {
+    background: var(--colour-oldyellow);
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    content: '';
+    display: block;
+    height: 2rem;
+    left: -.3rem;
+    position: absolute;
+    top: 2rem;
+    width: 3.3rem;
+    z-index: 9;
+}
+
+.loc1300.dual .steps {
+    border-color: var(--colour-oldyellow);
+}
+
+.loc1300.dual .yellow-stripe {
+    background-color: var(--colour-oldyellow);
+    height: 1.8rem;
+    left: 5rem;
+    width: 11rem;
+}
+
+.loc1300.dual .ns-logo {
+    left: 5.8rem;
+    top: .55rem;
+    transform: scale(1);
+}
+
+.loc1300.dual .mirrored .ns-logo {
+    transform: scaleX(-1);
+}
+
+.loc1300.dual .number {
+    color: white;
+    font-size: 1.1rem;
+    left: 16.3rem;
+    letter-spacing: -.05rem;
+    top: 7rem;
+    transform: scaleX(1);
+    z-index: 9;
 }
