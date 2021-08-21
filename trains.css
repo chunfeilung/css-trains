@@ -20,6 +20,7 @@
     .v250,
     .slt,
     .loc186,
+    .ice3,
     .virm,
     .ddm,
     .loc1700,
@@ -122,6 +123,7 @@ a {
     max-width: 44rem;
     overflow: hidden;
     position: relative;
+    user-select: none;
 }
 
 .grey.frame {
@@ -1580,6 +1582,327 @@ a {
 .loc186 .front.mirrored .ns-logo {
     transform: scaleX(-1);
 }
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * ICE 3M / BAUREIHE 406 / ICE INTERNATIONAL / BEST-LOOKING TRAIN EVER
+ * -----------------------------------------------------------------------------
+ */
+
+.ice3 {
+    height: 100%;
+    width: 100%;
+    left: 2rem;
+    position: absolute;
+    top: 2.1rem;
+}
+
+.ice3 * {
+    display: block;
+    position: absolute;
+}
+
+.ice3 .side {
+    background-color: #fafafa;
+    height: 3.4rem;
+    left: 4rem;
+    top: 4rem;
+    width: 10rem;
+}
+
+.ice3 .forehead {
+    background-color: #fafafa;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0.4rem 0 0 #fafafa,
+                0 0.8rem 0 0 #fafafa,
+                0 1.2rem 0 0 #fafafa,
+                0 1.6rem 0 0 #fafafa;
+    height: .8rem;
+    left: 6.5rem;
+    position: absolute;
+    top: 1.5rem;
+    transform: rotate(-10deg);
+    width: 6.3rem;
+}
+
+.ice3 .forehead::after {
+    background-color: #fafafa;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0.15rem 0 0 #fafafa,
+                0 0.30rem 0 0 #fafafa,
+                0 0.45rem 0 0 #fafafa,
+                0 0.60rem 0 0 #fafafa,
+                0 0.75rem 0 0 #fafafa,
+                0 0.90rem 0 0 #fafafa,
+                0 1.05rem 0 0 #fafafa,
+                0 1.20rem 0 0 #fafafa,
+                0 1.35rem 0 0 #fafafa,
+                0 1.50rem 0 0 #fafafa;
+    content: '';
+    display: block;
+    height: .3rem;
+    left: 4.9rem;
+    position: absolute;
+    top: .3rem;
+    transform: rotate(10deg);
+    width: 4rem;
+}
+
+.ice3 .nose .window {
+    background-color: #333;
+    border-radius: 50% 20% 60% 50%;
+    height: .3rem;
+    left: 2.8rem;
+    top: -3rem;
+    transform: rotate(-27deg);
+    width: 4rem;
+    z-index: 5;
+}
+
+.ice3 .nose {
+    background-color: #fafafa;
+    border-radius: 50%;
+    box-shadow: 1.5rem 0 0 0 #fafafa;
+    height: 1.5rem;
+    left: .4rem;
+    top: 6.1rem;
+    width: 3rem;
+}
+
+.ice3 .nose::before {
+    background-color: #fafafa;
+    border-radius: 50% 50% 0 0;
+    content: '';
+    display: block;
+    height: 1rem;
+    left: -.6rem;
+    position: absolute;
+    top: -2.1rem;
+    transform: rotate(-33deg);
+    width: 8rem;
+}
+
+.ice3 .nose::after {
+    background-color: #fafafa;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: .3rem;
+    left: .6rem;
+    position: absolute;
+    top: 1.4rem;
+    transform: rotate(15deg);
+    width: 2rem;
+}
+
+.ice3 .chin {
+    border-bottom: .8rem solid #fafafa;
+    border-left: .2rem solid transparent;
+    box-shadow: 0.0rem -0.7rem 0 0 #fafafa,
+                0.0rem -1.4rem 0 0 #fafafa,
+                0.0rem -2.1rem 0 0 #fafafa,
+                1.0rem -2.8rem 0 0 #fafafa,
+                2.0rem -3.5rem 0 0 #fafafa,
+                3.0rem -4.2rem 0 0 #fafafa,
+                4.4rem -4.9rem 0 0 #fafafa;
+    left: 2rem;
+    top: 7.4rem;
+    width: 2.2rem;
+}
+
+.ice3 .head .windows {
+    background-color: #495159;
+    clip-path: polygon(
+         0.0rem 1.2rem,
+         2.4rem 0.4rem,
+         3.2rem 0.2rem,
+         4.2rem 0.05rem,
+         4.8rem 0.0rem,
+        10.3rem 0.0rem,
+        10.3rem 1.6rem,
+         4.8rem 1.6rem, 
+         2.4rem 1.8rem,
+         0.4rem 2.0rem
+    );
+    height: 2rem;
+    left: 3.9rem;
+    top: 3.3rem;
+    width: 10.3rem;
+}
+
+.ice3 .head .windows .window {
+    background-color: #333;
+}
+
+.ice3 .head .windows .window:nth-child(1) {
+    clip-path: polygon(
+        .1rem 1.2rem,
+        .7rem .95rem,
+        1.5rem .7rem,
+        1.9rem 1.65rem,
+        .5rem 1.8rem
+    );
+    height: 1.8rem;
+    left: 0rem;
+    top: .1rem;
+    width: 1.9rem;
+}
+
+.ice3 .head .windows .window:nth-child(2) {
+    clip-path: polygon(
+        .1rem .65rem,
+        1rem .35rem,
+        1.9rem .15rem,
+        1.9rem 1.5rem,
+        .5rem 1.65rem
+    );
+    height: 1.8rem;
+    left: 1.6rem;
+    top: .1rem;
+    width: 1.9rem;
+}
+
+.ice3 .head .windows .window:nth-child(3) {
+    height: 1.4rem;
+    left: 4.4rem;
+    top: .1rem;
+    width: 2.6rem;
+}
+
+.ice3 .head .windows .window:nth-child(4) {
+    height: 1.4rem;
+    left: 8.3rem;
+    top: .1rem;
+    width: 1.9rem;
+}
+
+.ice3 .head .red-stripe {
+    background-color: #d0250e;
+    clip-path: polygon(
+        0.0rem 1.7rem,
+        2rem 1.1rem,
+        2.4rem 1rem,
+        3.3rem .8rem,
+        4.5rem .6rem,
+        5.4rem .5rem,
+        7.0rem .4rem,
+        6.9rem .85rem,
+        6rem .9rem,
+        4.5rem 1rem,
+        3.2rem 1.2rem,
+        1.8rem 1.5rem,
+        0.0rem 1.9rem
+    );
+    display: block;
+    height: 2rem;
+    left: .4rem;
+    top: 5rem;
+    width: 7rem;
+}
+
+.ice3 .ice {
+    color: #777;
+    font-size: 1.5rem;
+    font-style: italic;
+    left: 7.5rem;
+    top: 4.9rem;
+}
+
+.ice3 .main {
+    background: #fafafa;
+    height: 6.2rem;
+    left: 13rem;
+    top: 1.2rem;
+    width: 40rem;
+}
+
+.ice3 .main::after {
+    border-top: .8rem solid #56655f;
+    border-left: .2rem solid transparent;
+    border-right: .2rem solid transparent;
+    bottom: -.8rem;
+    content: '';
+    display: block;
+    height: 0;
+    left: .6rem;
+    position: absolute;
+    width: 24.3rem;
+}
+
+.ice3 .main .red-stripe {
+    background: #d0250e;
+    height: .5rem;
+    left: -2.6rem;
+    top: 4.1rem;
+    width: 40rem;
+}
+
+.ice3 .ns-logo-background {
+    background-color: #fafafa;
+    height: 1rem;
+    left: 8rem;
+    top: 3.8rem;
+    width: 2.4rem;
+}
+
+.ice3 .ns-logo {
+    left: 8.25rem;
+    top: 4rem;
+    transform: scale(.75);
+}
+
+.ice3 .door {
+    border: .1rem solid #aaa;
+    border-radius: .2rem;
+    left: 2rem;
+    height: 4.7rem;
+    top: .8rem;
+    width: 2rem;
+}
+
+.ice3 .door .window {
+    background-color: #333;
+    border-radius: .6rem;
+    height: 2.1rem;
+    left: .4rem;
+    top: .7rem;
+    width: 1.2rem;
+}
+
+.ice3 .main .windows {
+    background-color: #495159;
+    height: 1.6rem;
+    left: 5.7rem;
+    top: 2.1rem;
+    width: 30rem;
+}
+
+.ice3 .main .windows .window {
+    background-color: #333;
+    display: inline-block;
+    height: 1.4rem;
+    left: .1rem;
+    margin-right: .75rem;
+    position: relative;
+    top: .1rem;
+    width: 2.9rem;
+}
+
+.ice3 .front.wheels {
+    left: 7rem;
+    top: 7.2rem;
+    transform: scale(1.1);
+}
+
+.ice3 .back.wheels {
+    left: 40rem;
+    top: 7.2rem;
+    transform: scale(1.1);
+}
+
 
 
 
