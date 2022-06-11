@@ -193,7 +193,7 @@ a {
 }
 
 .flower.landscape {
-    letter-spacing: -.8rem;
+    letter-spacing: -.4rem;
     line-height: .5rem;
     margin-left: -.5rem;
     width: calc(100% + 1rem);
