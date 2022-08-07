@@ -176,6 +176,11 @@ a {
     z-index: 120;
 }
 
+.road.landscape {
+    background-color: #666;
+    box-shadow: none;
+}
+
 .dark-grass.landscape {
     background-color: #6a4;
 }
@@ -1581,6 +1586,287 @@ a {
 
 .loc186 .front.mirrored .ns-logo {
     transform: scaleX(-1);
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * VDL FUTURA / CHOO CHOO, I'M A TRAIN
+ * -----------------------------------------------------------------------------
+ */
+
+.bus {
+    display: block;
+    height: 20rem;
+    margin-left: 2rem;
+    margin-top: 3.7rem;
+    position: relative;
+}
+
+.bus * {
+    display: block;
+    position: absolute;
+}
+
+.bus .body {
+    background-color: #fafafa;
+    clip-path: polygon(
+        0 .5rem,
+        30.5rem .5rem,
+        32rem 5rem,
+        32rem 6rem,
+        31.5rem 7.2rem,
+        .2rem 7.2rem,
+        .1rem 6rem,
+        .3rem 4rem,
+        .1rem 2.2rem,
+        .3rem 1rem
+    );
+    height: 7.2rem;
+    width: 31.7rem;
+}
+
+.bus .roof-top,
+.bus .roof-top::before,
+.bus .roof-top::after {
+    background-color: #111;
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+    content: '';
+    display: block;
+    height: 1rem;
+    left: 9rem;
+    position: absolute;
+    width: 10rem;
+}
+
+.bus .roof-top::before,
+.bus .roof-top::after {
+    left: -2.7rem;
+    height: .5rem;
+    top: .3rem;
+    width: 2.5rem;
+}
+
+.bus .roof-top::after {
+    left: 16.5rem;
+}
+
+.bus .roof {
+    background-color: #111;
+    clip-path: polygon(
+        0 0,
+        31.7rem 0,
+        31.7rem 4.9rem,
+        28.1rem 4rem,
+        27.8rem 3.1rem,
+        3rem 3.1rem,
+        0 2.2rem
+    );
+    height: 4.9rem;
+    width: 31.7rem;
+}
+
+.bus .windows {
+    background-color: #333;
+    clip-path: polygon(
+        1.1rem .9rem,
+        31.7rem .9rem,
+        31.7rem 4.3rem,
+        31rem 4.6rem,
+        28.3rem 4rem,
+        28.3rem 3.1rem,
+        3rem 3.1rem,
+        1.1rem 2.5rem
+    );
+    height: 4.9rem;
+    text-orientation: mixed;
+    width: 31.7rem;
+    writing-mode: vertical-rl;
+}
+
+.bus .windows hr {
+    background-color: black;
+    border: none;
+    margin-right: 4.2rem;
+    position: static;
+    width: 1px;
+}
+
+.bus .windows hr:nth-child(1) {
+    margin-right: 3.4rem;
+}
+
+.bus .windows hr:nth-child(2) {
+    margin-right: 2rem;
+}
+
+.bus .windows hr.door {
+    height: 10rem;
+    position: absolute;
+    right: -3rem;
+    transform: rotate(-10deg);
+}
+
+.bus .light {
+    aspect-ratio: 3 / 1;
+    background-color: #ddd;
+    border-radius: 50%;
+    transform: rotate(40deg);
+}
+
+.bus .lights.front {
+    top: 5.2rem;
+    left: 30.8rem;
+}
+
+.bus .lights.rear {
+    left: -.1rem;
+    top: 4.6rem;
+    transform: scaleX(-1);
+}
+
+.bus .lights .light {
+    position: static;
+}
+
+.bus .lights.rear .light {
+    background-color: #900;
+}
+
+.bus .lights .light:nth-child(1) {
+    width: 1rem;
+}
+
+.bus .lights .light:nth-child(2) {
+    margin-top: .4rem;
+    margin-left: .2rem;
+    width: .7rem;
+}
+
+.bus .lights .light:nth-child(3) {
+    margin-top: .4rem;
+    margin-left: .3rem;
+    width: .7rem;
+}
+
+.bus .box,
+.bus .door {
+    background-color: #fafafa;
+    border: 1px solid black;
+}
+
+.bus .passenger.box {
+    height: 4.8rem;
+    left: 1.2rem;
+    width: 28rem;
+}
+
+.bus .luggage.box {
+    background-color: #fafafa;
+    height: 2.4rem;
+    left: 3.2rem;
+    top: 4.8rem;
+    width: 2.3rem;
+}
+
+.bus .luggage.box:nth-child(2) {
+    left: 11.6rem;
+    width: 3rem;
+}
+
+.bus .luggage.box:nth-child(3) {
+    left: 18.5rem;
+    width: 4rem;
+}
+
+.bus .luggage.box:nth-child(4) {
+    left: 21.5rem;
+    width: 3rem;
+}
+
+.bus .door {
+    height: 100%;
+}
+
+.bus .door.front {
+    left: 28.3rem;
+    width: 2rem;
+}
+
+.bus .door.rear {
+    left: 14.3rem;
+    width: 1.8rem;
+}
+
+.bus .mirror {
+    background-color: black;
+    clip-path: polygon(
+        0 0,
+        1.4rem 0,
+        2rem .5rem,
+        2.2rem 2rem,
+        2rem 2rem,
+        1.6rem .7rem,
+        1rem .4rem,
+        0 .4rem
+    );
+    height: 2rem;
+    left: 29.3rem;
+    top: 1rem;
+    width: 2.2rem;
+}
+
+.bus .ventilation {
+    background: repeating-linear-gradient(
+        0,
+        #555,
+        #aaa .2rem
+    );
+    height: .8rem;
+    left: 1.4rem;
+    top: 5.1rem;
+    width: 1.1rem;
+}
+
+.bus .name {
+    color: orangered;
+    font-style: italic;
+    font-weight: bold;
+    left: 18rem;
+    top: 3.4rem;
+}
+
+.bus .wheel {
+    background-color: #444;
+    border-radius: 50%;
+    height: 2.2rem;
+    top: 5.7rem;
+    width: 2.2rem;
+}
+
+.bus .wheel::before {
+    background-color: #aaa;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 1.4rem;
+    margin: .4rem;
+    width: 1.4rem;
+}
+
+.bus .first.wheel {
+    left: 5.8rem;
+}
+
+.bus .second.wheel {
+    left: 9rem;
+}
+
+.bus .third.wheel {
+    left: 25rem;
 }
 
 

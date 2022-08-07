@@ -10,6 +10,7 @@ Currently included:
 * [V250](https://trains.chuniversiteit.nl/#v250)
 * [Sprinter Lighttrain](https://trains.chuniversiteit.nl/#slt)
 * [Class 186](https://trains.chuniversiteit.nl/#ns185)
+* [VDL Futura](https://trains.chuniversiteit.nl/#bus)
 * [ICE 3M](https://trains.chuniversiteit.nl/#ice3m)
 * [Verlengd interregiomaterieel](https://trains.chuniversiteit.nl/#virm) ([refurbished](https://trains.chuniversiteit.nl/#virmm))
 * [Dubbeldeksmaterieel](https://trains.chuniversiteit.nl/#ddm) ([refurbished](https://trains.chuniversiteit.nl/#ddz))
