@@ -15,6 +15,7 @@
         font-size: .8rem;
     }
 
+    .icng,
     .sng,
     .flirt,
     .v250,
@@ -80,6 +81,22 @@ p {
 
 a {
     color: var(--colour-blue);
+}
+
+h2 a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: var(--colour-blue);
+}
+
+h2 a:hover::after {
+    content: '🔗';
+    font-size: 1.4rem;
+    margin-left: .5rem;
+    position: absolute;
 }
 
 .ns-logo {
@@ -257,6 +274,390 @@ a {
 .long.wheels::after {
     height: 1.7rem;
     width: 1.7rem;
+}
+
+
+
+
+/**
+ * -----------------------------------------------------------------------------
+ * INTERCITY NIEUWE GENERATIE
+ * -----------------------------------------------------------------------------
+ */
+
+.icng {
+    left: 2rem;
+    position: absolute;
+    top: 3rem;
+    display:  block;
+    width: 100%;
+    height: 50rem;
+}
+
+.icng * {
+    display: block;
+    position: absolute;
+}
+
+.icng .curvy-part {
+    height: 8rem;
+    width: 14rem;
+}
+
+.icng .curvy-part .main {
+    background-color: var(--colour-yellow);
+    clip-path: polygon(
+        .1rem 5rem,
+        .05rem 4.5rem,
+        .2rem 4.2rem,
+        .5rem 3.9rem,
+        1rem 3.4rem,
+        2rem 2.5rem,
+        4rem .4rem,
+        4.2rem .2rem,
+        4.4rem .1rem,
+        4.6rem .02rem,
+        4.8rem 0,
+        5.4rem .5rem,
+        6rem 1rem,
+        7rem 1.6rem,
+        7.5rem 1.8rem,
+        8rem 1.9rem,
+        8rem 5.8rem,
+        6rem 5.6rem,
+        5rem 5.7rem,
+        3rem 6.3rem,
+        1rem 6.5rem,
+        .5rem 6.6rem,
+        0 6.8rem,
+        .2rem 6.4rem,
+        .4rem 6rem
+    );
+    height: 7rem;
+    left: 1.2rem;
+    top: .3rem;
+    width: 8rem;
+    z-index: 2;
+}
+
+.icng .curvy-part .main .ninja-mask {
+    background: #222;
+    clip-path: polygon(
+        3.8rem 0,
+        4.2rem .5rem,
+        5rem 1.2rem,
+        5.5rem 1.5rem,
+        6rem 1.7rem,
+        6.2rem 1.8rem,
+        7rem 2.1rem,
+        7.4rem 2.2rem,
+        8rem 2.3rem,
+        8rem 3.9rem,
+        6rem 3.4rem,
+        5rem 3rem,
+        4rem 2.8rem,
+        3.5rem 2.7rem,
+        3rem 2.7rem,
+        2rem 2.8rem,
+        .5rem 3.2rem
+    );
+    height: 3.9rem;
+    top: .5rem;
+    width: 8rem;
+}
+
+.icng .curvy-part .main .ninja-mask .window {
+    border-top: .5rem solid #333;
+    border-left: .7rem solid transparent;
+    border-right: .05rem solid transparent;
+    height: 0;
+    left: 1.6rem;
+    top: 1.5rem;
+    transform: rotate(-45deg);
+    width: 2rem;
+}
+
+.icng .curvy-part .door {
+    border-left: .1rem solid var(--colour-oldyellow);
+    border-right: .1rem solid var(--colour-oldyellow);
+    height: 3.6rem;
+    left: 6.4rem;
+    top: 2.1rem;
+    width: 1.3rem;
+    z-index: 10;
+}
+
+.icng .curvy-part .door::after {
+    background-color: #333;
+    border: .1rem solid #444;
+    border-radius: .2rem;
+    content: ' ';
+    display: block;
+    height: .8rem;
+    left: .3rem;
+    position: absolute;
+    top: .5rem;
+    width: .5rem;
+}
+
+.icng .curvy-part .main .headlight {
+  border-bottom: .6rem solid #555;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  height: 0;
+  left: -.5rem;
+  top: 3.7rem;
+  transform: rotate(-25deg);
+  width: 0; 
+}
+
+.icng .curvy-part .main .ns-logo {
+    left: 2.5rem;
+    top: 4rem;
+    transform: scale(.7);
+}
+
+.icng .curvy-part .yellow-overlay {
+    background-color: var(--colour-yellow);
+    clip-path: polygon(
+        0 .3rem,
+        1rem .6rem,
+        2rem .9rem,
+        6rem 1.7rem,
+        7rem 1.9rem,
+        8rem 2rem,
+        8rem 2.1rem,
+        0 2.1rem
+    );
+    left: 6rem;
+    height: 2.1rem;
+    top: 3.5rem;
+    width: 9rem;
+    z-index: 2;
+}
+
+.icng .curvy-part .chin {
+    background-color: #555;
+    height: 2rem;
+    left: 1.6rem;
+    top: 5.3rem;
+    width: 4.4rem;
+    z-index: 1;
+}
+
+.icng .boxy-part {
+    background-color: var(--colour-yellow);
+    height: 5.5rem;
+    left: 6.5rem;
+    top: .8rem;
+    width: 40rem;
+}
+
+.icng .boxy-part .roof {
+    background-color: var(--colour-grey);
+    height: .7rem;
+    width: 40rem;
+}
+
+.icng .boxy-part .roof .box-1 {
+    background-color: #444;
+    height: .5rem;
+    left: .5rem;
+    top: -.5rem;
+    width: 1.6rem;
+}
+
+.icng .boxy-part .roof .box-2 {
+    background-color: #666;
+    height: .5rem;
+    left: 3rem;
+    top: -.5rem;
+    width: 2.4rem;
+}
+
+.icng .boxy-part .roof .box-3 {
+    background-color: #555;
+    height: .5rem;
+    left: 7.0rem;
+    top: -.5rem;
+    width: 6.6rem;
+}
+
+.icng .boxy-part .roof .box-4 {
+    background-color: #888;
+    height: .5rem;
+    left: 14.6rem;
+    top: -.5rem;
+    width: 2rem;
+}
+
+.icng .boxy-part .roof .box-5 {
+    background-color: #555;
+    height: .5rem;
+    left: 18rem;
+    top: -.5rem;
+    width: 6.6rem;
+}
+
+.icng .boxy-part .roof .box-6 {
+    background-color: #bbb;
+    height: .3rem;
+    left: 31.3rem;
+    top: -.3rem;
+    width: 3rem;
+}
+
+.icng .boxy-part .blue-line {
+    background-color: var(--colour-blue);
+    width: 40rem;
+}
+
+.icng .boxy-part .top.blue-line {
+    height: .7rem;
+    top: .7rem;
+}
+
+.icng .boxy-part .display {
+    background-color: var(--colour-grey);
+    border: .1rem solid black;
+    height: .3rem;
+    left: 20.5rem;
+    top: 1.6rem;
+    width: 2.5rem;
+}
+
+.icng .boxy-part .window,
+.icng .boxy-part .door::after {
+    background: repeating-linear-gradient(
+        45deg,
+        #cbe1e7,
+        #d5e7ec 1rem
+    );
+    border: .05rem solid #333;
+    border-radius: .2rem;
+}
+
+.icng .boxy-part .small.window {
+    height: 1.4rem;
+    top:  2.4rem;
+    width: 2.5rem;
+}
+
+.icng .boxy-part .first.small.window {
+    left: 3.8rem;
+}
+
+.icng .boxy-part .first.small.window::after,
+.icng .boxy-part .first.large.window::after,
+.icng .boxy-part .fourth.large.window::after {
+    color: white;
+    content: '2';
+    font-weight: bold;
+    margin-left: 2.9rem;
+    position: relative;
+    top: -.2rem;
+}
+
+.icng .boxy-part .first.large.window::after {
+    margin-left: 3.5rem;
+}
+
+.icng .boxy-part .fourth.large.window::after {
+    margin-left: 4rem;
+}
+
+.icng .boxy-part .second.small.window {
+    left: 7.6rem;
+}
+
+.icng .boxy-part .third.small.window {
+    left: 34.2rem;
+}
+
+.icng .boxy-part .large.window {
+    height: 2.1rem;
+    top:  2.4rem;
+    width: 3.2rem;
+}
+
+.icng .boxy-part .first.large.window {
+    left: 15.8rem;
+}
+
+.icng .boxy-part .second.large.window {
+    left: 20.2rem;
+}
+
+.icng .boxy-part .second.large.window::after {
+    border: .05rem solid #333;
+    border-radius: .1rem;
+    content: ' ';
+    display: block;
+    height: .4rem;
+    margin-left: -.1rem;
+    width: 3.4rem;
+}
+
+.icng .boxy-part .third.large.window {
+    left: 24.6rem;
+}
+
+.icng .boxy-part .fourth.large.window {
+    left: 29rem;
+}
+
+.icng .boxy-part .main.blue-line {
+    background: linear-gradient(
+        90deg,
+        #222 0,
+        #222 3rem,
+        var(--colour-blue) 4rem,
+        var(--colour-blue) 100%
+    );
+    height: 2.4rem;
+    top: 2.3rem;
+}
+
+.icng .boxy-part .door {
+    background-color: var(--colour-yellow);
+    border: .2rem solid var(--colour-blue);
+    box-sizing: content-box;
+    height: 3.9rem;
+    left: 11.3rem;
+    top: 1.4rem;
+    width: 2.9rem;
+}
+
+.icng .boxy-part .door::after {
+    content: ' ';
+    display: block;
+    height: 1.9rem;
+    left: .7rem;
+    position: absolute;
+    top: .5rem;
+    width: 1.4rem;
+}
+
+.icng .boxy-part .ns-logo {
+    left: 25.8rem;
+    top: 4.7rem;
+    transform: scale(.7);
+}
+
+.icng .boxy-part .bottom {
+    border-top: .8rem solid #555;
+    border-left: 1.5rem solid transparent;
+    border-right: 1.5rem solid transparent;
+    height: 0;
+    left: 8rem;
+    top: 5.5rem;
+    width: 30rem;
+}
+
+.icng .wheels {
+    left: 9.2rem;
+    top: 6.4rem;
+    transform: scale(1.15);
 }
 
 

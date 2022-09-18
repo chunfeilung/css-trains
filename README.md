@@ -5,6 +5,7 @@ Illustrations of Dutch post-war rolling stock operated by the Nederlandse
 Spoorwegen, created entirely using HTML and CSS.
 
 Currently included:
+* [Intercity Nieuwe Generatie](https://trains.chuniversiteit.nl/#icng)
 * [Sprinter Nieuwe Generatie](https://trains.chuniversiteit.nl/#sng)
 * [Flirt](https://trains.chuniversiteit.nl/#flirt)
 * [V250](https://trains.chuniversiteit.nl/#v250)
