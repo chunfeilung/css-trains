@@ -2621,7 +2621,7 @@ h2 a:hover::after {
         7.6rem 0,
         7.6rem 5.3rem,
         2.7rem 5.3rem,
-        .1rem 4.5rem,
+        .2rem 4.5rem,
         .25em 3.5rem,
         1.4rem 1.3rem,
         1.9rem .7rem,
@@ -2637,6 +2637,10 @@ h2 a:hover::after {
     top: -.8rem;
     transform: scaleY(1.1);
     width: 7.6rem;
+}
+
+.virm.flow .nose::before {
+    background: var(--colour-oldblue);
 }
 
 .virm .nose::after {
@@ -2666,13 +2670,28 @@ h2 a:hover::after {
     width: 7.6rem;
 }
 
-.virm.modern .nose::after {
+.virm.modern .nose::after,
+.virm.flow .nose::after {
     background-color: var(--colour-yellow);
+}
+
+.virm.flow .nose .job {
+    background-color: var(--colour-yellow);
+    clip-path: polygon(
+        .2rem .5rem,
+        2rem 0,
+        2rem 1.5rem,
+        .2rem 1.4rem
+    );
+    height: 1.5rem;
+    top: 2.5rem;
+    width: 2rem;
 }
 
 .virm .door {
     border: .05rem solid #333;
     border-bottom: .4rem solid #333;
+    z-index: 5;
 }
 
 .virm .driver.door {
@@ -2692,6 +2711,11 @@ h2 a:hover::after {
     position: absolute;
     top: 4rem;
     width: 10rem;
+}
+
+.virm.modern .driver.door::after,
+.virm.flow   .driver.door::after {
+    width: 5.4rem;
 }
 
 .virm .driver.door .window {
@@ -2718,7 +2742,8 @@ h2 a:hover::after {
     z-index: 8;
 }
 
-.virm.modern .front .doors::before {
+.virm.modern .front .doors::before,
+.virm.flow .front .doors::before {
     background-color: var(--colour-blue);
     border-radius: .2rem;
     height: 1.9rem;
@@ -2728,14 +2753,23 @@ h2 a:hover::after {
     width: 4.5rem;
 }
 
+.virm.flow .front .doors::before {
+    background-color: transparent;
+}
+
 .virm .doors .door {
     height: 4rem;
     width: 1.1rem;
     z-index: 9;
 }
 
-.virm.modern .doors .door {
+.virm.modern .doors .door,
+.virm.flow .doors .door {
     background-color: var(--colour-yellow);
+}
+
+.virm.flow .back .doors .door {
+    background-color: var(--colour-oldblue);
 }
 
 .virm .doors .door:nth-child(2n+1) {
@@ -2743,9 +2777,15 @@ h2 a:hover::after {
 }
 
 .virm.modern .doors .door:nth-child(2n+1) {
-    box-shadow: -.3rem -.1rem var(--colour-blue),
-                -.3rem -.3rem var(--colour-blue),
-                0     -.3rem var(--colour-blue);
+    box-shadow: -.3rem -.05rem var(--colour-blue),
+                -.3rem -.30rem var(--colour-blue),
+                0      -.30rem var(--colour-blue);
+}
+
+.virm.flow .front .doors .door:nth-child(2n+1) {
+    box-shadow: -.3rem -.05rem var(--colour-oldblue),
+                -.3rem -.30rem var(--colour-oldblue),
+                0      -.30rem var(--colour-oldblue);
 }
 
 .virm .doors .door:nth-child(2n+2) {
@@ -2754,15 +2794,63 @@ h2 a:hover::after {
 }
 
 .virm.modern .doors .door:nth-child(2n+2) {
-    box-shadow: .3rem -.1rem var(--colour-blue),
-                .3rem -.3rem var(--colour-blue),
-                0     -.3rem var(--colour-blue);
+    box-shadow: .3rem -.05rem var(--colour-blue),
+                .3rem -.30rem var(--colour-blue),
+                0     -.30rem var(--colour-blue);
+}
+
+.virm.flow .front .doors .door:nth-child(2n+2) {
+    box-shadow: .3rem -.05rem var(--colour-oldblue),
+                .3rem -.30rem var(--colour-oldblue),
+                0     -.30rem var(--colour-oldblue);
 }
 
 .virm .doors .door .window {
     height: 1.5rem;
     margin: .6rem .2rem;
     width: .6rem;
+}
+
+.virm.flow .flow {
+    background-color: var(--colour-oldblue);
+    clip-path: polygon(
+        3rem 1rem,
+        6rem 1rem,
+        15rem .5rem,
+        15rem 1rem,
+        14rem 1.1rem,
+        13rem 1.3rem,
+        12rem 1.5rem,
+        11rem 2rem,
+        10rem 2.5rem,
+        9rem 3.2rem,
+        8rem 3.6rem,
+        7.5rem 3.7rem,
+        3rem 3.9rem,
+        .7rem 4rem
+    );
+    height: 4rem;
+    width: 15rem;
+    z-index: 2;
+}
+
+.virm.flow .flow2 {
+    background-color: var(--colour-oldblue);
+    clip-path: polygon(
+        0 .9rem,
+        1rem .8rem,
+        2rem .5rem,
+        3rem .1rem,
+        3.5rem 0,
+        17.1rem 0,
+        15.8rem 1rem,
+        0 1rem
+    );
+    height: 1rem;
+    left: 12.5rem;
+    top: 6.1rem;
+    width: 17.1rem;
+    z-index: 2;
 }
 
 .virm .decks {
@@ -2790,6 +2878,10 @@ h2 a:hover::after {
     width: 32.8rem;
 }
 
+.virm.flow .decks::before {
+    background-color: var(--colour-oldblue);
+}
+
 .virm .decks::after {
     background-color: var(--colour-oldyellow);
     clip-path: polygon(
@@ -2811,7 +2903,8 @@ h2 a:hover::after {
     z-index: 1;
 }
 
-.virm.modern .decks::after {
+.virm.modern .decks::after,
+.virm.flow .decks::after {
     background-color: var(--colour-yellow);
 }
 
@@ -2826,14 +2919,20 @@ h2 a:hover::after {
     z-index: 5;
 }
 
-.virm.modern .upper-deck {
+.virm.modern .upper-deck,
+.virm.flow .upper-deck {
     background-color: var(--colour-blue);
     border-radius: .2rem;
     box-shadow: inset 3.4rem 0 var(--colour-yellow);
     width: 25.2rem;
 }
 
-.virm.modern .upper-deck::after{
+.virm.flow .upper-deck {
+    background-color: transparent;
+    box-shadow: inset 3.4rem 0 transparent;
+}
+
+.virm.modern .upper-deck::after {
     background-color: var(--colour-blue);
     border-radius: .2rem;
     content: '';
@@ -2856,7 +2955,8 @@ h2 a:hover::after {
     z-index: 5;
 }
 
-.virm.modern .upper-deck::before {
+.virm.modern .upper-deck::before,
+.virm.flow .upper-deck::before {
     background-color: transparent;
 }
 
@@ -2868,6 +2968,14 @@ h2 a:hover::after {
 
 .virm.modern .ns-logo {
     background-color: var(--colour-blue);
+}
+
+.virm.flow .ns-logo {
+    background-color: var(--colour-white);
+    left: 5.8rem;
+    top: 2.6rem;
+    transform: scale(5.5);
+    z-index: 3;
 }
 
 .virm .lower-deck {
@@ -2882,13 +2990,18 @@ h2 a:hover::after {
     z-index: 5;
 }
 
-.virm.modern .lower-deck {
+.virm.modern .lower-deck,
+.virm.flow .lower-deck {
     background-color: var(--colour-blue);
     height: 2rem;
     left: 2.9rem;
     padding-left: 4.3rem;
     top: 3.8rem;
     width: calc(24.5rem - 4rem);
+}
+
+.virm.flow .lower-deck {
+    background-color: transparent;
 }
 
 .virm .lower-deck::after {
@@ -2902,17 +3015,20 @@ h2 a:hover::after {
     content: '';
     display: block;
     height: .8rem;
-    left: -1.7rem;
+    left: -1.6rem;
     position: absolute;
     top: 2.9rem;
     width: 27rem;
 }
 
-.virm.modern .lower-deck::after {
+.virm.modern .lower-deck::after,
+.virm.flow .lower-deck::after {
+    left: -1.3rem;
     top: 3.1rem;
 }
 
-.virm .window {
+.virm .window,
+.virm .vent {
     background: repeating-linear-gradient(
         45deg,
         #8ba1b7,
@@ -2924,6 +3040,35 @@ h2 a:hover::after {
     position: static;
     height: 1.2rem;
     width: 2.5rem;
+}
+
+.virm .vent {
+    background: repeating-linear-gradient(
+        #333,
+        var(--colour-oldblue) .1rem
+    );
+    height: 1rem;
+    left: 1.8rem;
+    position: absolute;
+    top: .15rem;
+    width: 1.3rem;
+    z-index: 10;
+}
+
+.virm.modern .vent,
+.virm.flow .vent {
+    left: 1.3rem;
+    background: repeating-linear-gradient(
+        #530,
+        var(--colour-yellow) .1rem
+    );
+}
+
+.virm.flow .vent {
+    background: repeating-linear-gradient(
+        #333,
+        #222 .1rem
+    );
 }
 
 .virm .small.window {
@@ -2958,6 +3103,13 @@ h2 a:hover::after {
                 -.8rem .3rem #333;
 }
 
+.virm.flow .back {
+    background-color: var(--colour-yellow);
+    box-shadow: 0 -1rem var(--colour-yellow),
+                0 -2.2rem var(--colour-oldblue),
+                -.8rem .3rem #333;
+}
+
 .virm .back .doors {
     left: 0rem;
     top: 0rem;
@@ -2973,6 +3125,10 @@ h2 a:hover::after {
     left: 0;
 }
 
+.virm.flow .back .doors::before {
+    background-color: transparent;
+}
+
 .virm.modern .back .doors::after {
     background-color: var(--colour-blue);
     border-radius: .2rem;
@@ -2985,6 +3141,10 @@ h2 a:hover::after {
     transform: rotate(-25deg);
     width: 4.7rem;
     z-index: 6;
+}
+
+.virm.flow .back .doors::after {
+    background-color: transparent;
 }
 
 .virm .back > .window {
