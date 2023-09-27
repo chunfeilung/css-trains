@@ -2710,11 +2710,6 @@ h2 a:hover::after {
     height: .3rem;
     position: absolute;
     top: 4rem;
-    width: 10rem;
-}
-
-.virm.modern .driver.door::after,
-.virm.flow   .driver.door::after {
     width: 5.4rem;
 }
 
